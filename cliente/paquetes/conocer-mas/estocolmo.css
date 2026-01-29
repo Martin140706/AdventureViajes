@@ -1,0 +1,757 @@
+:root {
+  --header-color: #fcf4f4;
+  --txtylinks: #00b2ff;
+  --amarillo: #deb841;
+  --hover-amarillo: #ffebb0;
+  --rojo: #ef4545;
+  --rojo-hover: #960a0a;
+  --gris: #7c7c7c;
+  --txt: #000000;
+}
+
+.user-item-dropdown {
+  position: absolute;
+  top: 110px; /* Ajustá según la altura del header */
+  right: 1px;
+  background-color: var(--header-color);
+  border-radius: 8px;
+  display: none;
+  flex-direction: column;
+  height: 100px;
+  width: 200px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.user-item-dropdown a {
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.user-item-dropdown a:hover {
+  background-color: #f0f0f0;
+}
+
+.containerConocer {
+  background-color: var(--header-color);
+  border-radius: 30px;
+  width: 1200px;
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.foto {
+  width: 100%;
+  height: 250px;
+  border-radius: 30px 0px 0px 0px;
+  object-fit: cover;
+}
+
+.derecha h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.derecha {
+  padding: 20px;
+}
+
+.fecha {
+  display: flex;
+  align-items: center;
+  background-color: var(--amarillo);
+  width: 100%;
+  max-width: 280px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  margin-top: 35px;
+}
+
+.fecha .icono {
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.pasajeros {
+  display: flex;
+  align-items: center;
+  background-color: var(--amarillo);
+  width: 100%;
+  max-width: 280px;
+  padding: 8px 12px;
+  border-radius: 20px;
+}
+
+.pasajeros .icono {
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.pasajeros p {
+  margin-left: 10px;
+}
+
+.linea {
+  background-color: var(--gris);
+  opacity: 10%;
+  height: 5px;
+  margin-top: 62px;
+  border: none;
+}
+
+.lineaVert {
+  background-color: var(--gris);
+  opacity: 20%;
+  width: 5px;
+  height: 200px;
+  display: flex;
+  margin-left: 595px;
+  border-radius: 50px;
+  opacity: 10%;
+}
+
+.precios {
+  margin-top: 20px;
+}
+
+.pPersona {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.formasPago {
+  margin-top: 15px;
+}
+
+.forma {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.forma p {
+  margin-left: 10px;
+}
+
+.forma img {
+  flex-shrink: 0;
+}
+
+.izquierda h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.infoContainer,
+.incluye {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.resp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.resp h3 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.resp p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.incluye h3 {
+  text-align: center;
+  margin: 20px 0 15px 0;
+}
+
+/* Estilos del menú desplegable de monedas */
+.currency-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.currency-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: rgba(107, 114, 128, 0.1);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.currency-btn:hover {
+  background-color: var(--hover-amarillo);
+  transform: translateY(-2px);
+}
+
+.currency-flag {
+  font-size: 16px;
+}
+
+.currency-code {
+  font-weight: 500;
+}
+
+.dropdown-arrow {
+  transition: transform 0.2s ease;
+}
+
+.currency-dropdown.open .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.currency-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 220px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.currency-dropdown.open .currency-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.currency-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.currency-option:last-child {
+  border-bottom: none;
+}
+
+.currency-option:hover {
+  background-color: #f9fafb;
+}
+
+.currency-option.selected {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+.currency-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.currency-option .currency-code {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.currency-name {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.currency-option.selected .currency-name {
+  color: #3b82f6;
+}
+
+.img-banderas {
+  max-width: 25px;
+}
+
+.btn-agregar-carrito {
+  background-color: var(--rojo);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-top: 20px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-agregar-carrito:hover {
+  background-color: var(--rojo-hover);
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE STYLES */
+
+/* Large Desktop (1200px+) */
+@media (min-width: 1200px) {
+  .containerConocer {
+    width: 1200px;
+  }
+}
+
+/* Desktop and Large Tablets (1024px - 1199px) */
+@media (max-width: 1199px) {
+  .containerConocer {
+    width: 95%;
+    max-width: 1000px;
+  }
+  
+  .foto {
+    height: 220px;
+  }
+  
+  .derecha {
+    padding: 18px;
+  }
+  
+  .fecha,
+  .pasajeros {
+    max-width: 250px;
+  }
+}
+
+/* Tablets (768px - 1023px) */
+@media (max-width: 1023px) {
+  .containerConocer {
+    width: 95%;
+    max-width: 800px;
+    margin-top: 20px;
+  }
+  
+  .foto {
+    height: 200px;
+  }
+  
+  .derecha {
+    padding: 16px;
+  }
+  
+  .derecha h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .fecha,
+  .pasajeros {
+    max-width: 220px;
+    padding: 6px 10px;
+  }
+  
+  .fecha {
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+  
+  .linea {
+    margin-top: 40px;
+  }
+  
+  .precios {
+    margin-top: 15px;
+  }
+  
+  .pPersona h3,
+  .total h3 {
+    font-size: 14px;
+  }
+  
+  .pPersona h2,
+  .total h2 {
+    font-size: 1.2rem;
+  }
+  
+  .formasPago h3 {
+    font-size: 14px;
+  }
+  
+  .forma p {
+    font-size: 13px;
+  }
+}
+
+/* Mobile Landscape and Small Tablets (600px - 767px) */
+@media (max-width: 767px) {
+  .containerConocer {
+    grid-template-columns: 1fr;
+    width: 95%;
+    max-width: 600px;
+    border-radius: 20px;
+  }
+  
+  .foto {
+    width: 100%;
+    height: 200px;
+    border-radius: 20px 20px 0 0;
+  }
+  
+  .izquierda {
+    order: 1;
+  }
+  
+  .derecha {
+    order: 2;
+    padding: 20px;
+  }
+  
+  .derecha h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+  
+  .fecha,
+  .pasajeros {
+    max-width: 100%;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .fecha {
+    margin-top: 20px;
+  }
+  
+  .linea {
+    margin-top: 30px;
+  }
+  
+  .precios {
+    margin-top: 20px;
+  }
+  
+  .pPersona,
+  .total {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .pPersona h3,
+  .total h3 {
+    margin-bottom: 5px;
+  }
+  
+  .infoContainer {
+    margin-top: 15px;
+  }
+  
+  .resp {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+  }
+  
+  .resp h3 {
+    font-weight: 600;
+    color: var(--txt);
+  }
+  
+  .resp p {
+    font-weight: 400;
+    color: #666;
+  }
+  
+  .incluye {
+    margin-top: 20px;
+  }
+  
+  .forma {
+    margin-bottom: 10px;
+  }
+  
+  .btn-agregar-carrito {
+    padding: 14px 24px;
+    font-size: 16px;
+    margin-top: 25px;
+  }
+}
+
+/* Mobile Portrait (480px - 599px) */
+@media (max-width: 599px) {
+  .containerConocer {
+    width: 95%;
+    margin-top: 15px;
+    border-radius: 15px;
+  }
+  
+  .foto {
+    height: 180px;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .derecha {
+    padding: 16px;
+  }
+  
+  .derecha h2 {
+    font-size: 1.3rem;
+  }
+  
+  .izquierda h2 {
+    font-size: 1.3rem;
+    margin: 15px 0;
+  }
+  
+  .fecha,
+  .pasajeros {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  
+  .fecha .icono,
+  .pasajeros .icono {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .pPersona h2,
+  .total h2 {
+    font-size: 1.1rem;
+  }
+  
+  .formasPago {
+    margin-top: 20px;
+  }
+  
+  .forma {
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+  
+  .forma img {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+  }
+  
+  .forma p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  
+  .resp {
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .resp h3 {
+    font-size: 13px;
+  }
+  
+  .resp p {
+    font-size: 13px;
+  }
+  
+  .incluye h3 {
+    font-size: 16px;
+    margin: 15px 0 10px 0;
+  }
+}
+
+/* Small Mobile (320px - 479px) */
+@media (max-width: 479px) {
+  .containerConocer {
+    width: 98%;
+    margin-top: 10px;
+    border-radius: 12px;
+  }
+  
+  .foto {
+    height: 160px;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .derecha {
+    padding: 12px;
+  }
+  
+  .derecha h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .izquierda h2 {
+    font-size: 1.2rem;
+    margin: 12px 0;
+  }
+  
+  .fecha,
+  .pasajeros {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+  
+  .fecha {
+    margin-top: 15px;
+    margin-bottom: 12px;
+  }
+  
+  .linea {
+    margin-top: 20px;
+    height: 3px;
+  }
+  
+  .precios {
+    margin-top: 15px;
+  }
+  
+  .pPersona h3,
+  .total h3 {
+    font-size: 13px;
+  }
+  
+  .pPersona h2,
+  .total h2 {
+    font-size: 1rem;
+  }
+  
+  .formasPago h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .forma p {
+    font-size: 11px;
+  }
+  
+  .resp {
+    padding: 6px;
+    margin-bottom: 8px;
+  }
+  
+  .resp h3,
+  .resp p {
+    font-size: 12px;
+  }
+  
+  .incluye h3 {
+    font-size: 15px;
+    margin: 12px 0 8px 0;
+  }
+  
+  .btn-agregar-carrito {
+    padding: 12px 20px;
+    font-size: 15px;
+    margin-top: 20px;
+  }
+  
+  .infoContainer,
+  .incluye {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/* Extra Small Mobile (up to 319px) */
+@media (max-width: 319px) {
+  .containerConocer {
+    width: 100%;
+    margin: 10px 5px;
+    border-radius: 10px;
+  }
+  
+  .foto {
+    height: 140px;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .derecha {
+    padding: 10px;
+  }
+  
+  .derecha h2,
+  .izquierda h2 {
+    font-size: 1.1rem;
+  }
+  
+  .fecha,
+  .pasajeros {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+  
+  .pPersona h2,
+  .total h2 {
+    font-size: 0.9rem;
+  }
+  
+  .forma p {
+    font-size: 10px;
+  }
+  
+  .resp h3,
+  .resp p {
+    font-size: 11px;
+  }
+  
+  .btn-agregar-carrito {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Utility classes for responsive behavior */
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none !important;
+  }
+  
+  .show-mobile {
+    display: block !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .hide-desktop {
+    display: none !important;
+  }
+  
+  .show-desktop {
+    display: block !important;
+  }
+}

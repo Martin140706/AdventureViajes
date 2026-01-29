@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Viajes - Tu próxima aventura te espera</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="vuelos.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="https://i.ibb.co/wfpGYss/Logo-con-letras.png" alt="Adventure Viajes" class="logo-image">
+                    </div>
+                </div>
+                <button class="menu" >
+                    <svg  
+                        xmlns="http://www.w3.org/2000/svg"  
+                        width="24"  
+                        height="24"  
+                        viewBox="0 0 24 24"  
+                        fill="none"  
+                        stroke="currentColor"  
+                        stroke-width="2"  
+                        stroke-linecap="round"  
+                        stroke-linejoin="round"  
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-menu">
+                            <path stroke="none" 
+                                  d="M0 0h24v24H0z" 
+                                  fill="none"
+                            /><path 
+                            d="M4 8l16 0" 
+                            />
+                            <path 
+                            d="M4 16l16 0" 
+                            />
+                    </svg>
+                   
+                </button>
+                <div class="menu-dropdown" id="mainMenuDropdown">
+                    <a href="../paquetes/paquetes.html">Paquetes</a>
+                    <a href="../contactanos/contactanos.html">Contáctanos</a>
+                    <a href="../autos/autos.html">Autos</a>
+                  </div>
+                  
+                <nav class="nav-compu">
+                   
+                    <a style="text-decoration: none;" href="../paquetes/paquetes.html">
+                    <div class="btn-nav">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="2"/>
+                            <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="2"/>
+                            <line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span>Paquetes</span>
+                    </div>
+                </a>
+                    <a style="text-decoration: none;" href="../contactanos/contactanos.html">
+                    <div class="btn-nav">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span>Contáctanos</span>
+                    </div>
+                </a>
+                    <a style="text-decoration: none;" href="../autos/autos.html">
+                    <div class="btn-nav">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" stroke="currentColor" stroke-width="2"/>
+                            <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" stroke="currentColor" stroke-width="2"/>
+                            <path d="M5 17h-2v-4m-1 -8h11v12m-4 0h6m4 0v-6a2 2 0 0 0 -2 -2h-2" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span>Autos</span>
+                    </div>
+                </a>
+
+                </nav>
+                <div class="compu-user">
+                            <!-- Menú desplegable de monedas -->
+                    <div class="currency-dropdown" id="currencyDropdown">
+                        <button class="currency-btn" id="currencyBtn">
+                            <span class="currency-flag" id="currentFlag">🇦🇷</span>
+                            <span class="currency-code" id="currentCode">AR$</span>
+                            <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        
+                        <div class="currency-menu" id="currencyMenu">
+                            <div class="currency-option" data-code="AR$" data-flag="🇦🇷" data-name="Peso Argentino">
+                                <img class="img-banderas" src="../imagenes/argentina-flag-icon.png" alt="arg">
+                                <div class="currency-info">
+                                    <span class="currency-code">AR$</span>
+                                    <span class="currency-name">Peso Argentino</span>
+                                </div>
+                            </div>
+                            <div class="currency-option" data-code="USD" data-flag="🇺🇸" data-name="Estados Unidos">
+                                <img class="img-banderas" src="../imagenes/estados-unidos.png" alt="eu">
+                                <div class="currency-info">
+                                    <span class="currency-code">USD</span>
+                                    <span class="currency-name">Estados Unidos</span>
+                                </div>
+                            </div>
+                            <div class="currency-option" data-code="R$" data-flag="🇧🇷" data-name="Reales">
+                               <img class="img-banderas" src="../imagenes/brazil-flag-icon.png" alt="br">
+                                <div class="currency-info">
+                                    <span class="currency-code">R$</span>
+                                    <span class="currency-name">Reales</span>
+                                </div>
+                            </div>
+                            <div class="currency-option" data-code="EU" data-flag="🇪🇺" data-name="Euros">
+                                <img class="img-banderas" src="../imagenes/espana.png" alt="esp">
+                                <div class="currency-info">
+                                    <span class="currency-code">EU</span>
+                                    <span class="currency-name">Euros</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                <div class="user-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
+                                        <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                <p id="nombre"></p>
+
+                    </div>
+                    <div class="user-item-dropdown" id="user-itemDropdown">
+                        <a style="text-decoration:none;" href="../carrito/carrito.html">
+                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="8" cy="21" r="1" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="19" cy="21" r="1" stroke="currentColor" stroke-width="2"/>
+                            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span style="padding: 10px;">Carrito</span>
+                        </a>
+                        <a href="../ini-reg/sesion.html"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-logout-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 8v-2a2 2 0 0 1 2 -2h7a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-2" /><path d="M15 12h-12l3 -3" /><path d="M6 15l-3 -3" /></svg> 
+                            <span style="margin: 10px;">Cerrar Sesion</span></a>
+                        
+                      </div>
+                    <div class="user-item-movil" >
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="user-item-dropdown" id="user-itemDropdown">
+                        <a style="text-decoration:none;" href="../carrito/carrito.html">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="8" cy="21" r="1" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="19" cy="21" r="1" stroke="currentColor" stroke-width="2"/>
+                            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span style="padding: 10px;">Carrito</span>
+                        </a>
+                        <a href="../ini-reg/sesion.html"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-logout-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 8v-2a2 2 0 0 1 2 -2h7a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-2" /><path d="M15 12h-12l3 -3" /><path d="M6 15l-3 -3" /></svg> 
+                            <span style="margin: 10px;">Cerrar Sesion</span></a>
+                            
+                      </div>
+                </div>
+            </div>
+        </div>
+    </header> 
+                     
+        <main>
+            <section>
+                <section class="search-section">
+                    <div class="search-background"></div>
+                    <div class="container">
+                        <div class="search-form">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label>Origen</label>
+                                    <div class="input-wrapper">
+                                        <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2"/>
+                                            <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                        <input type="text" placeholder="Ciudad, país o región" id="origin">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Destino</label>
+                                    <div class="input-wrapper">
+                                        <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2"/>
+                                            <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                        <input type="text" placeholder="¿A dónde vamos?" id="destination">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Ida</label>
+                                    <div class="input-wrapper">
+                                        <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                        <input type="date" id="departure">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Vuelta</label>
+                                    <div class="input-wrapper">
+                                        <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                        <input type="date" id="return">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Pasajeros</label>
+                                    <div class="input-wrapper">
+                                        <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
+                                            <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                        <select id="passengers">
+                                            <option>1 Pasajero, Eco</option>
+                                            <option>2 Pasajeros, Eco</option>
+                                            <option>3 Pasajeros, Eco</option>
+                                            <option>1 Pasajero, Premium</option>
+                                            <option>2 Pasajeros, Premium</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button class="search-btn">Buscar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            
+            <!-- Sección del carrusel con fondo -->
+            <section class="carousel-section">
+                <div class="carousel-container">
+                    <div class="carousel-wrapper">
+                        <div class="carousel-track" id="carouselTrack">
+                        <!-- Slide 1 -->
+                        <div class="carousel-slide active">
+                            <a style="text-decoration: none;" href="../vuelos/conoer-mas/conocer-mas1.html">
+                            <div class="destination-card">
+                            <div class="card-image" style="background-image: url('https://i.ibb.co/ch5BghHj/Madrid.jpg');">
+                                <div class="card-content">
+                                <span class="trip-type">IDA Y VUELTA</span>
+                                <h2 class="destination-name">Madrid</h2>
+                                <div class="price-info">
+                                    
+                                    <span class="price cambio" data-precio="968635">AR$ 968.635</span>
+                                    <span class="origin">Desde Buenos Aires</span>
+                                </div>
+                                </div>
+                            </div>
+                        </a>
+                            </div>
+                            
+                            <div class="destination-card">
+                                <a style="text-decoration: none;" href="../vuelos/conoer-mas/conocer-mas2.html">
+                            <div class="card-image" style="background-image: url('https://i.ibb.co/FkdWjfL2/rio-de-janeiro.png');">
+                                <div class="card-content">
+                                <span class="trip-type">IDA Y VUELTA</span>
+                                <h2 class="destination-name">Río de Janeiro</h2>
+                                <div class="price-info">
+                                    <span class="price cambio" data-precio="251702">AR$ 251.702</span>
+                                    <span class="origin">Desde Buenos Aires</span>
+                                </div>
+                                </div>
+                            </div>
+                            </a>
+                            </div>
+                            <div class="destination-card">
+                                <a style="text-decoration: none;" href="./conoer-mas/conocer-mas3.html">
+                            <div class="card-image" style="background-image: url('https://i.ibb.co/BVZmZM3h/Miami.jpg');">
+                                <div class="card-content">
+                                <span class="trip-type">IDA Y VUELTA</span>
+                                <h2 class="destination-name">Miami</h2>
+                                <div class="price-info">
+                                    <span class="price cambio" data-precio="818329">AR$ 818.329</span>
+                                    <span class="origin">Desde Buenos Aires</span>
+                                </div>
+                                </div>
+                            </div>
+                            </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2 -->
+                        <div class="carousel-slide">
+                            <div class="destination-card">
+                                <a style="text-decoration: none;" href="./conoer-mas/conocer-mas4.html">
+                            <div class="card-image" style="background-image: url('https://images.pexels.com/photos/819764/pexels-photo-819764.jpeg?auto=compress&cs=tinysrgb&w=800');">
+                                <div class="card-content">
+                                <span class="trip-type">IDA Y VUELTA</span>
+                                <h2 class="destination-name">Barcelona</h2>
+                                <div class="price-info">
+                                    <span class="price cambio" data-precio="909695">AR$ 909.695</span>
+                                    <span class="origin">Desde Buenos Aires</span>
+                                </div>
+                                </a>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="destination-card">
+                                <a style="text-decoration: none;" href="./conoer-mas/conocer-mas5.html">
+                            <div class="card-image" style="background-image: url('https://i.ibb.co/FkC8FL3C/santiago.jpg');">
+                                <div class="card-content">
+                                <span class="trip-type">IDA Y VUELTA</span>
+                                <h2 class="destination-name">Santiago de Chile</h2>
+                                <div class="price-info">
+                                    <span class="price cambio" data-precio="211284">AR$ 211.284</span>
+                                    <span class="origin">Desde Buenos Aires</span>
+                                </div>
+                            </a>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="destination-card">
+                                <a style="text-decoration: none;" href="./conoer-mas/conocer-mas6.html">
+                            <div class="card-image" style="background-image: url('https://i.ibb.co/zWbLJSFt/milan.jpg');">
+                                <div class="card-content">
+                                <span class="trip-type">IDA Y VUELTA</span>
+                                <h2 class="destination-name">Milan</h2>
+                                <div class="price-info">
+                                    <span class="price cambio" data-precio="1084346">$ 1.084.346</span>
+                                    <span class="origin">Desde Buenos Aires</span>
+                                </div>
+                            </a>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-indicators">
+                        <button class="indicator active" data-slide="0"></button>
+                        <button class="indicator" data-slide="1"></button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="airlines">
+                <div class="container">
+                    <p class="airlines-title">Aerolíneas con las que contamos nosotros</p>
+                        <div class="airlines-grid">
+                            <div class="airline-item">
+                                <svg enable-background="new 0 0 1848.9 787.1" viewBox="0 0 1848.9 787.1" xmlns="http://www.w3.org/2000/svg"><path d="m268.5 214.7c-2.4-3.8-5.5-7-9.3-9.4-3.6-2.2-7.5-3.8-11.7-4.6-3.8-.8-7.7-1.1-11.6-1.1s-8 .5-12.3 1.3c-4.5.9-8.9 2.5-13.1 4.6-4.5 2.3-8.6 5.3-12.1 8.9-3.8 3.8-7.2 8.6-10.1 14.4l-113.6 206.4c-.8 1.6-1.1 3.4-1.1 5.2-.1 2.3.9 4.6 2.6 6.2 1.9 1.5 4.1 2 6.4 2h23.5c2.4 0 4.7-.8 6.8-2.2 2.1-1.3 3.8-3.1 4.6-5.3l39.1-80.1h94.5l9.3 79.1c.4 2.1 1.1 3.9 2.2 5.4 1.6 2.2 4.2 3.1 6.6 3.1h23.4c2.7 0 5.5-.8 7.5-2.8 2-2.1 2.7-4.8 2.7-7.6v-1.7l-29.2-207c-1-5.8-2.5-10.8-5.1-14.8m-95.7 113 49.1-88.6c1.9-3.5 6.6-4.2 9.4-4 6 .3 6.7 4 6.7 4l10.4 88.6zm313.7-65c-6.3-6.4-14.1-11.4-23.2-15-9.3-3.6-20.1-5.5-32.6-5.5-28.2 0-51.6 7.8-69.7 23.6-18.1 15.7-30.1 38.4-36.1 67.6l-5.1 25c-1.5 7.5-2.3 15.2-2.4 22.9 0 12.6 2.3 23.4 7 32.4 4.3 8.5 10.5 15.9 18.2 21.6 7.6 5.6 16.3 9.7 25.5 12.1 9.3 2.4 18.9 3.7 28.6 3.7h.2c13.2 0 25-.5 35.3-1.6 11-1.2 21.9-2.7 32.8-4.5 3.6-.6 6.5-1.3 8.7-3.6 1.9-1.9 2.8-4.5 3.4-7.5l2.3-12.2v-.3-1.7c.1-2.2-.9-4.3-2.7-5.6s-3.8-1.5-5.8-1.6h-2.3c-10.6 1.4-21.3 2.5-32 3.5-11.6 1-23.2 1.5-34.8 1.6-14.4 0-25.4-2.9-33.3-8.3-7.4-5.2-11.3-13.4-11.4-26.4 0-3.2.2-6.5.6-10 .4-3.3 1.2-6.9 2.4-10.7l.5-1.8h126.6c3.4 0 6.6-.9 8.7-3.4 1.6-2 2.6-4.5 3.2-7.2l3.1-15.1c1.6-7.8 2.4-15.2 2.4-22.2 0-9.6-1.5-18.8-4.5-27.3-2.5-8.5-7.3-16.2-13.6-22.5m-24.7 66.5h-94.9c1.8-7.1 4.1-13.5 7.2-19.5 3.3-6.4 7.6-12.2 12.7-17.3 4.9-4.9 10.7-8.8 17.2-11.4 6.5-2.7 13.7-4 21.8-4 26.8.5 37.6 10.6 38.1 34.3-.1 5.3-.8 11.3-2.1 17.9m178.9-61.2 2.7-15.1v-.3-1.7c.1-2.6-1.1-5.1-3.2-6.6s-4.6-1.9-7.3-1.9h-.8c-9.3 0-18.7 1.1-28.2 3.3-7.7 1.8-15.6 5.2-23.8 10.4v-1.9c0-2.5-.6-5.1-2.5-6.8-1.8-1.8-4.4-2.5-6.8-2.5h-18.2c-2.9 0-5.7 1-7.9 3-2.1 1.8-3.7 4.1-4.4 6.8l-34.4 182.9v1.8c0 2.5.7 5 2.5 6.8s4.3 2.5 6.8 2.5h19c2.9 0 5.8-1.1 8-2.9 2.3-1.8 4-4.2 4.8-6.9l27.9-148.5c8.8-4.9 16.8-8.3 24.1-10.3 7.7-2 17-3.1 27.8-3.1h1.2c6 .3 11.8-3.1 12.7-9m156.3-5.7c-6.4-6.4-14.4-11.3-23.6-14.8-9.4-3.5-20.1-5.2-32.3-5.2-58.6-.3-95.1 30.8-105.8 90.2l-5 27.2c-.6 3.5-1 6.8-1.4 10.1-.4 3.4-.6 6.9-.6 10.3 0 10.4 1.6 19.9 4.8 28.6 3.1 8.5 8 16.1 14.3 22.5s14.2 11.3 23.5 14.8 20 5.2 31.9 5.2c15.5 0 29.4-2 41.5-6.3 12.1-4.2 22.6-10.2 31.4-18.1 8.9-8 16.1-17.7 21.2-28.5 5.4-11 9.5-23.5 12.1-37.4l5-27.2c.5-3.5 1-6.9 1.4-10.3.4-3.5.6-6.9.6-10.4 0-10.1-1.5-19.5-4.7-28.2-3-8.5-7.9-16.2-14.3-22.5m-22.5 59.8c-.3 3.5-.7 6.9-1.4 10.3l-5 27.2c-1.4 8-3.9 15.8-7.6 23.2-3.3 6.6-7.7 12.6-13 17.8-5.1 4.9-11 8.9-17.5 11.6-6.9 2.8-14.4 4.3-21.9 4.2-14.6 0-24.5-3.2-30-8.6-5.7-5.6-8.7-14.1-8.7-26.4 0-5.9.7-12.8 2.3-20.5l5-27.2c3.2-17.9 10-31.6 20.4-41.8 10.2-10 23-15 39.2-15 14.7 0 24.5 3.3 30 8.9 5.7 5.8 8.8 14.5 8.8 26.8-.2 3.1-.4 6.2-.6 9.5m134.1-130.3c0-2.4-.6-4.8-2.4-6.6s-4.2-2.4-6.6-2.4h-20.1c-6-.4-11.3 3.9-12 9.8l-46.3 244.9v1.8c0 2.5.6 4.9 2.3 6.8 1.7 1.8 4.1 2.6 6.4 2.6h20.3c2.9 0 5.7-1.2 7.8-3.1 2-1.9 3.4-4.1 4.1-6.7l46.4-245.3zm57.4 53h-18.5c-2.9 0-5.8 1.1-8 2.9-2.3 1.7-3.9 4.1-4.7 6.9l-34.5 182.9v1.8c0 2.5.7 5.1 2.7 6.9 1.9 1.8 4.4 2.4 6.9 2.4h18.7c2.9 0 5.7-1.1 8-2.9s4-4.1 4.7-6.9l34.5-182.9v-1.8c0-2.5-.7-5.1-2.7-6.9s-4.5-2.4-7.1-2.4m-22-18.9h20.8c2.5 0 4.9-.4 6.9-2 1.4-1 3-2.4 5.1-4.4l38.9-32.6c1.7-1.6 3.1-3.3 3.2-5.9-.1-4.5-4.8-5.7-7.4-5.8h-25.5c-2.7.1-5.2.5-7.3 2-1.8 1.4-3.5 2.9-5.2 4.4l-32.8 31.9c-1.8 1.8-3.4 3.7-3.5 6.6.1 3.8 4.3 5.8 6.8 5.8m211.5 33.6c-5.1-5.5-11.6-9.7-19.3-12.8-7.9-3-17.2-4.5-27.8-4.5-13.4 0-25.1 1.7-35.1 5.2-7.6 2.6-15 5.7-22.4 9.3l.1-.7.1-.3v-1.7c0-2.2-.7-4.3-2.1-6.1-1.8-2.4-4.6-3.2-7.3-3.2h-18.9c-2.9 0-5.7 1.1-7.9 3-2.2 1.7-3.7 4.1-4.4 6.8l-34.5 183v1.8c0 2.2.7 4.4 2 6.1 1.7 2.3 4.5 3.2 7.1 3.2h19.1c2.9 0 5.7-1.1 8.1-2.9 2.3-1.8 4-4.1 4.7-6.8l28.3-149.4c11.4-5 20.9-8.3 28.5-9.9 8-1.7 15.6-2.6 22.8-2.6 13.8-.1 22.5 2.5 26.1 6.1 4.1 4 6.2 9.6 6.3 17.5 0 2.7-.2 5.7-.6 9-.4 3.4-.9 6.8-1.4 10l-20.1 117.6v1.8c0 2.5.8 5.2 2.7 6.9 1.9 1.8 4.5 2.4 7.1 2.4h18.6c2.9 0 5.7-1.1 8-2.9s4-4.1 4.7-6.9l20.2-117.6c1.3-6.9 2-13.6 2-20 .1-7.7-1.1-15.3-3.5-22.6-2.5-7-6.2-13.4-11.2-18.8m195.2 3.2c-6.3-6.4-14.1-11.3-23.2-15-9.3-3.6-20.1-5.4-32.6-5.4-28.2 0-51.6 7.8-69.7 23.6-18.1 15.7-30.1 38.4-36.1 67.6l-5 25c-1.5 7.5-2.3 15.2-2.4 22.9 0 12.6 2.3 23.5 7 32.4 4.6 8.8 10.7 16 18.2 21.6 7.4 5.6 16 9.5 25.5 12.1 9.4 2.4 19.1 3.7 28.8 3.7 13.3 0 25-.5 35.3-1.6 11-1.2 21.9-2.7 32.8-4.5 3.6-.6 6.5-1.3 8.8-3.6 1.9-1.9 2.8-4.5 3.4-7.5l2.3-12.2v-.2-1.8c.1-2.2-1-4.3-2.7-5.6-1.8-1.3-3.8-1.5-5.9-1.6h-2.3c-10.6 1.4-21.3 2.5-32 3.5-11.6 1-23.2 1.5-34.8 1.6-14.5 0-25.5-2.9-33.3-8.3-7.4-5.2-11.3-13.4-11.4-26.4 0-3.2.2-6.5.5-9.9.4-3.4 1.2-6.9 2.4-10.8l.5-1.8h126.5c3.4 0 6.6-.9 8.7-3.4 1.7-2 2.6-4.5 3.3-7.2l3.1-15.1c1.6-7.8 2.4-15.2 2.4-22.2 0-9.6-1.5-18.8-4.4-27.3-2.7-8.7-7.4-16.3-13.7-22.6m-24.8 66.5h-94.9c1.7-7.1 4.1-13.5 7.2-19.5 3.3-6.4 7.6-12.2 12.7-17.3 4.9-4.9 10.7-8.8 17.1-11.4 6.5-2.6 13.7-4 21.8-4 26.8.5 37.6 10.6 38.1 34.3.1 5.3-.6 11.3-2 17.9m241.6-69.8c-.1-5.3-4.9-8-9.9-8.8-9.8-2.4-20.7-4.4-32.7-6-11.8-1.5-23.7-2.3-35.6-2.3s-23.4 1.4-34.5 4.2c-11.2 2.8-21.4 7.6-30.7 14.1-9.3 6.6-17.3 15.3-23.9 26.1-6.7 10.8-11.6 24.2-14.7 40l-6.9 35.4c-1.5 7.3-2.3 14.7-2.4 22.1 0 11.3 1.6 21.2 5.1 29.7 3.4 8.4 8 15.4 13.8 21 5.8 5.5 12.8 9.7 20.4 12.2 7.8 2.7 16 4 24.3 4h.2c6.6 0 12.5-.4 18-1.3 5.3-.8 10.5-2.2 15.5-4.1 5.1-1.9 10-4.2 14.7-6.8 2.8-1.5 5.8-3.3 9-5.2l-.5 2.9v.3 2.5c0 2.2.5 4.4 1.8 6.2 2 2.5 4.8 3.1 7.6 3.1h15.5c2.9 0 5.7-1.2 7.9-3s3.7-4.2 4.4-6.8l33.2-175.7c.2-1.2.4-2.4.4-3.8m-67.4 138.7c-10.2 6.2-19.3 10.9-27.5 14.3-8 3.3-16.6 5.1-25.3 5.1-8.5 0-15.5-2.5-21.4-7.4-5.3-4.4-8.6-12.9-8.6-26.2 0-2.5.1-5.1.4-7.9.2-2.8.6-5.4 1.1-7.9l6.9-36.9c3.5-18.6 10.3-32.3 20.2-41.5 9.7-9.1 24-13.9 43.5-13.9 8.1 0 15 .4 20.6 1.1 4.4.5 8.6 1.1 12.6 1.9zm223-151.1c-4.1-.7-8-1.4-11.6-2-3.7-.6-7.8-1.1-12.1-1.5-4.3-.3-9.1-.6-14.4-.9-6.4-.2-12.8-.4-19.3-.3-9.8 0-19.6.9-29.4 2.5-10 1.7-19 4.8-26.8 9.4-7.7 4.5-14.3 10.7-19.3 18.1-5.2 7.8-7.6 17.4-7.6 28.6 0 17.6 11.9 33 33.8 46.3l35.2 21.1c9 5.2 14.8 9.6 17.2 12.7 2.6 3.4 3.7 6.5 3.7 9.6 0 5.2-1.1 9.3-3.1 12.6-2.2 3.4-4.9 6.1-8.3 8.1-4 2.2-8.4 3.7-12.9 4.6-5.2 1-10.4 1.5-15.7 1.5-3.2 0-7.4-.1-12.3-.4-5.3-.2-10.5-.5-15.8-.9-5.4-.3-10.9-.8-16.3-1.3-5-.4-10-.9-15-1.4h-2.7c-5.1-.4-10 3.1-10.8 8.2l-2.4 12.6v.3 1.5c-.1 2.6 1.1 5.6 3.5 7.1 1.7 1.1 3.6 1.9 5.7 2.4 4.6 1 9.6 1.9 14.9 2.6s10.8 1.3 16.3 1.7c5.4.4 10.7.6 15.8.9 4.7.2 9.4.3 14.1.3h.3c10.7 0 21.1-1 31.3-3.1 10.4-2.1 19.6-5.6 27.7-10.5 8-4.8 14.8-11.6 19.5-19.6 5-8.3 7.4-18.5 7.4-30.5 0-8.6-2.6-16.8-7.7-24.2-5.2-7.6-14.5-15.3-28-23.6l-34.8-21.1c-6.6-4-11.7-7.7-15-11-3.1-3.1-4.4-6-4.4-9.6 0-4.6 1.1-8 3.1-10.5 2.2-2.8 5-5 8.6-6.7 3.8-1.8 7.9-3 12.1-3.6 4.4-.7 8.8-1 13.2-1 10.7 0 21.2.3 31.2.9 10.1.6 18.5 1.2 25.1 2h1.5c5.5.3 10.5-3.6 11.2-9l1.9-11.8.1-.3v-1.7c.3-4.7-4-8.6-8.7-9.1" fill="#0081c6"/><path d="m542.2 522.1c-10.5-2.2-21.1-4.1-31.7-5.6-12-1.8-24-2.7-36.1-2.7-14.6 0-27.6 1.5-39.1 4.7-11.5 3.1-21.6 8.3-30.4 15.4-8.7 7.1-15.9 16.3-21.7 27.6s-10.2 25-13.3 41.5l-5 26.1c-1.5 8-2.3 16.1-2.4 24.3 0 11.4 1.8 21.4 5.6 29.7 3.7 8.4 8.9 15.2 15.4 20.6 6.5 5.3 14.3 9.2 23.4 11.8 9.1 2.5 18.8 3.8 29.3 3.8 2.9 0 6.3-.2 10.3-.6 4.2-.3 8.3-.7 12.4-1.2 4-.5 8-1 12-1.6 2.6-.4 4.9-.8 7-1.1l-.3 1.7c-1.5 8-3.4 14.7-5.7 20-2.2 5.3-5.3 9.4-9.1 12.6-3.9 3.1-8.7 5.4-14.5 6.7-5.9 1.5-13 2.1-21.4 2.1-5.6 0-11.1-.2-16.7-.6l-18.1-1.1c-5.6-.3-11.1-.7-16.7-1.2-5.1-.5-9.3-1-12.6-1.4h-1.4c-2.3 0-4.5.5-6.2 1.7-1.8 1.1-3 3.1-3.6 5.3l-2 10.5v.4c-.5.8-.4 1.2-.4 1.7.1 3.9 3.4 6.3 7.9 7.5 5.3 1.5 13.7 2.9 25.3 4.3 11.7 1.5 24.9 2.2 39.6 2.2 14 0 26.2-1.1 36.6-3.3 10.5-2.2 19.6-6 27.1-11.5 7.6-5.6 13.8-13.1 18.7-22.4 4.9-9.4 8.6-21.1 11.2-35l34.8-182.5v-.2c0-.3 0-.6 0-.6.2-.6.3-1.3.3-2-.1-4.2-3.7-6.7-8.5-7.6m-58.2 163.3c-2.8.6-5.9 1.1-9.3 1.5-4 .5-8 .9-11.9 1.3-4 .3-7.8.5-11.5.7-3.7.1-7 .2-9.8.2-14.5 0-25-2.6-31.5-7.5-6.4-4.7-9.9-13.6-9.9-26.8 0-3.5.2-7.4.5-11.7.4-4.2 1.1-8.7 2.1-13.4l5.1-26.2c4.1-20.7 11.1-35.8 20.9-45.3s23.3-14.3 41-14.3c8.2 0 15.9.4 23.3 1.2 6.6.8 12.3 1.6 17 2.4zm654.5-208v-1.6c0-4.6-3.3-7.5-7.9-7.5h-19.7c-2.5 0-5 .9-6.9 2.5-2 1.5-3.4 3.6-4.1 6l-2 15.5v1.6c0 4.6 3.3 7.6 8 7.6h19.7c2.5 0 4.8-1 6.8-2.5 2-1.6 3.5-3.6 4.1-6m-770.5 51.9c5.8.1 10.2-2.5 11-7.5l2.7-15.1.1-.2v-1.6c0-4.5-3.8-6.8-8.7-6.8h-.8c-9.4 0-18.7 1.1-27.8 3.2-8.5 2-17.4 6.2-26.7 12.5l.8-3.9v-.1-1.7c0-4.5-3.1-7.5-7.6-7.5h-18.1c-2.5 0-4.9.9-6.7 2.6-1.9 1.5-3.2 3.5-3.8 5.9l-34.4 182.6v1.6c0 4.4 3.1 7.4 7.6 7.4h19c2.5 0 4.8-.9 6.8-2.5 2.1-1.7 3.5-3.7 4.1-6l28-149.2c9.1-5.2 17.6-8.8 25.3-10.9 7.9-2.1 17.3-3.2 28.3-3.2zm649.7 1.5h40.2c2.5 0 4.9-.9 6.8-2.6 1.9-1.6 3.2-3.6 3.8-5.9l2.4-12.3v-.1-1.7c0-4.6-3.3-7.5-7.9-7.5h-39.6l5.4-30v-1.3c0-3.9-2.6-6.8-6.4-6.8h-1.1l-20.7 2.9c-5.3.7-9.2 3.8-10 8.6l-4.7 26.6-25.7.7c-2.3 0-4.6.7-6.5 2.1s-3.1 3.4-3.7 5.6l-2 9.8v.2 1.2c-.1 4.1 3.3 6.9 7.7 7.2l24.5 3.1-23.3 122.8c-.5 2.9-.8 5.3-1.1 7.4-.3 2.3-.4 4.6-.4 6.9 0 12.8 4.7 22.4 14.1 27.8 9.1 5.3 20.3 7.9 33.6 7.9 3.7 0 7.7-.2 12.1-.6 4.2-.3 8.3-.7 12.4-1.2 3.1-.5 5.3-1.2 6.8-2.6 1.3-1.2 2.2-2.9 2.8-4.8l2.3-12.9v-.1-1.6c.1-2-.7-4.2-2.8-4.8-1.4-.5-2.9-.7-4.4-.6h-23.5c-6 0-10.4-.6-12.8-1.6-1.9-.7-3.1-2.9-3.1-8 0-2.4.4-5.9 1.1-10.1zm505.2-17.2c0-4-3.6-6.3-8.4-7.1-10.7-2.6-21.6-4.6-32.6-6-11.7-1.5-23.5-2.3-35.4-2.3-11.7 0-23.1 1.4-34 4.2-10.8 2.7-21.1 7.4-30.2 13.9-9 6.5-16.9 15-23.4 25.5-6.6 10.6-11.4 23.7-14.6 39.4l-6.9 35.4c-1.5 7.2-2.3 14.5-2.3 21.8 0 11.1 1.6 20.9 4.9 29.1s7.8 15 13.3 20.3c5.7 5.3 12.4 9.4 19.8 11.8 7.7 2.6 15.8 3.9 23.9 3.9 6.5 0 12.4-.4 17.6-1.3 5.2-.8 10.3-2.2 15.1-4 5-1.8 9.9-4.1 14.5-6.7 3.9-2.1 7.9-4.5 12.3-7.4l-1.2 7v2.4c0 1.9.5 3.7 1.5 5.1 1.3 1.9 3.6 2.4 6.1 2.4h15.4c2.5 0 4.8-.9 6.7-2.6 1.9-1.5 3.2-3.6 3.8-5.9l33.3-175.7c.6-.7.8-1.9.8-3.2m-64 139.8c-10.4 6.4-19.9 11.4-28.4 14.9-8.2 3.4-17 5.2-26 5.2-8.9 0-16.4-2.6-22.6-7.8-5.9-4.9-9.2-14-9.2-27.6 0-5.4.5-10.8 1.5-16.1l7-36.8c3.6-18.8 10.5-32.9 20.7-42.5 10.1-9.5 24.9-14.3 44.7-14.3 8.2 0 15.1.4 20.8 1.1l.3-1.8-.2 1.8c4.9.6 9.7 1.3 14.5 2.2zm228.4-143c.2-4-3-6.9-7.2-7.5-4.2-.7-8-1.4-11.6-2-4-.7-7.9-1.2-11.9-1.5-4.8-.4-9.6-.7-14.3-.9-6.4-.3-12.8-.4-19.2-.3-9.7 0-19.4.8-29 2.5-9.8 1.7-18.6 4.8-26.1 9.2-7.5 4.3-14 10.3-18.8 17.5-4.9 7.4-7.4 16.7-7.4 27.6 0 16.6 11.3 31.6 32.9 44.8l35.2 21.2c9 5.2 15 9.7 17.7 13.1 2.8 3.7 4.1 7.1 4.1 10.7 0 5.5-1.2 9.9-3.4 13.5s-5.4 6.6-9.1 8.6c-3.8 2.2-8.2 3.8-13.4 4.8-5.3 1.1-10.7 1.6-16 1.6-3.3 0-7.4-.1-12.4-.4s-10.3-.5-15.8-.9c-5.5-.3-10.9-.8-16.4-1.3-5-.4-10-.9-15-1.4h-2.5c-4.6-.2-8.3 2.4-9.1 6.8l-2.3 12.6v.2 1.2c-.1 2.3.9 4.5 2.7 5.7 1.5.9 3.2 1.6 5.2 2.2 4.5 1 9.4 1.9 14.7 2.5 5.3.7 10.7 1.3 16.2 1.7 5.4.3 10.7.6 15.8.9 5.2.2 9.9.3 14 .3 10.7 0 21.1-1 31.2-3.1 10.2-2.1 19.2-5.5 27.1-10.3 7.8-4.7 14.3-11.2 18.9-19 4.8-8 7.2-17.9 7.2-29.6 0-8.2-2.5-16-7.4-23.1-5-7.3-14.1-15-27.4-23.1l-34.8-21.1c-6.7-4-11.8-7.8-15.4-11.2-3.4-3.3-4.9-6.8-4.9-10.8 0-5 1.2-8.8 3.4-11.6 2.5-3.1 5.6-5.5 9.2-7.2 4-1.9 8.3-3.2 12.7-3.8 4.4-.7 8.9-1 13.4-1 10.7 0 21.2.3 31.3.8 10.2.6 18.5 1.3 25.2 2h1.4c4.9.2 8.7-2.8 9.4-7.6l1.9-11.8-1.7-.3h1.8zm-376 4.5c-4.8-5.2-11.1-9.3-18.6-12.3-7.6-3-16.7-4.4-27.1-4.4-13.3 0-24.7 1.7-34.5 5.1-8.6 3-17 6.6-25.3 10.6l.6-4.1v-1.7c0-1.8-.6-3.6-1.7-5-1.3-1.8-3.5-2.5-5.8-2.5h-19c-2.5 0-4.9.9-6.7 2.5-1.9 1.5-3.2 3.6-3.9 5.9l-34.5 182.6v1.6c0 1.8.7 3.5 1.8 5 1.2 1.7 3.4 2.5 5.7 2.5h19.1c2.5 0 4.9-.9 6.9-2.5s3.4-3.6 4.1-5.9l28.4-150.1c11.9-5.2 21.8-8.7 29.7-10.4 7.6-1.7 15.4-2.6 23.2-2.6 14 0 23.1 2.5 27.3 6.7 4.5 4.4 6.8 10.5 6.8 18.8 0 2.7-.2 5.9-.6 9.3-.3 3.4-.8 6.8-1.3 10.1l-22.4 117.8v1.6c0 4.6 3.3 7.5 8 7.5h18.6c2.5 0 4.8-.9 6.9-2.5 2-1.5 3.4-3.6 4-6l22.5-117.8c1.3-6.8 1.9-13.4 1.9-19.7 0-7.8-1.1-15.1-3.4-22-2.2-6.7-5.9-12.9-10.7-18.1m-393.1 0c-4.8-5.2-11-9.3-18.6-12.3-7.5-3-16.6-4.4-27-4.4-13.3 0-24.8 1.7-34.6 5.1-8.5 3-16.9 6.6-25.2 10.6l.6-4v-1.7c0-1.8-.6-3.6-1.7-5-1.3-1.8-3.5-2.5-5.9-2.5h-18.9c-2.5 0-4.8.9-6.8 2.5-1.9 1.6-3.2 3.6-3.8 5.9l-34.4 182.6v1.6c0 1.8.6 3.5 1.7 5 1.3 1.7 3.5 2.5 5.8 2.5h19c2.5 0 4.9-.9 6.9-2.5 2-1.7 3.4-3.7 4.1-6l28.3-149.9c11.9-5.3 21.8-8.7 29.7-10.4 7.6-1.7 15.4-2.6 23.2-2.6 14 0 23.1 2.5 27.3 6.7 4.5 4.4 6.8 10.5 6.8 18.8 0 2.8-.2 5.9-.6 9.3s-.8 6.8-1.3 10.1l-22.4 117.8v1.6c0 4.5 3.3 7.4 7.9 7.4h18.5c2.5 0 4.9-.9 6.9-2.5 2-1.5 3.4-3.6 4.1-5.9l22.4-117.8c1.3-6.8 1.9-13.4 1.9-19.7.1-7.5-1.1-14.9-3.4-22.1-2.1-6.8-5.7-13-10.5-18.2m-198.8 3.1c-6.1-6.1-13.7-11-22.6-14.5-9-3.6-19.7-5.4-31.9-5.4-27.9 0-50.8 7.7-68.6 23.2-17.7 15.5-29.5 37.7-35.5 66.6l-5 25.1c-1.5 7.4-2.3 15-2.4 22.5 0 12.3 2.2 22.9 6.8 31.6 4.2 8.3 10.2 15.4 17.7 21 7.2 5.4 15.6 9.3 24.9 11.7 9.2 2.4 18.6 3.6 28.2 3.6h.2c13.2 0 24.9-.5 35.1-1.6 11-1.2 21.9-2.7 32.7-4.5 3.5-.5 6-1.3 7.7-3.1 1.6-1.5 2.4-3.7 3-6.5l2.3-12.2v-.2-1.6c0-3.5-3.2-5.4-6.8-5.4h-2.3c-9.3 1.2-19.7 2.3-31.8 3.4-11.6 1.1-23.3 1.6-35 1.6-14.7 0-26.1-3-34.3-8.7-8.1-5.6-12.1-14.6-12.2-27.8 0-3.2.2-6.7.6-10.2.4-3.4 1.1-7.1 2.4-11.1l.8-3h127.9c3.1 0 5.8-.8 7.4-2.8 1.4-1.7 2.3-3.9 2.9-6.5l3.1-15.1c1.6-7.7 2.3-15 2.3-21.8.1-9.1-1.4-18.1-4.3-26.7-2.6-8-7.2-15.4-13.3-21.6m-22 66.7-.1.4h-98.6c1.6-7.7 4.3-15.1 7.9-22.1 3.4-6.6 7.8-12.6 13-17.8 5.1-5 11.1-9 17.8-11.8 6.7-2.7 14.2-4.1 22.5-4.1 27.3.3 39.7 11.6 39.9 36.1-.1 5.8-.8 12.3-2.4 19.3m424.4-78.6h-18.5c-2.5 0-4.9.9-6.9 2.5-2 1.5-3.4 3.5-4.1 5.9l-33.1 177.4v1.6c0 4.5 3.3 7.4 8 7.4h18.6c2.4 0 4.8-.9 6.8-2.5 2.1-1.7 3.4-3.7 4.1-6l33.1-177.3v-1.7c0-4.4-3.4-7.3-8-7.3m-924.8-39c-2.4-3.8-5.5-6.9-9.2-9.3-3.6-2.2-7.5-3.8-11.7-4.6-7.9-1.5-16.1-1.5-24 .2-4.5 1-8.9 2.5-13 4.6-4.5 2.3-8.6 5.3-12.1 8.9-3.8 3.8-7.2 8.6-10.1 14.3l-113.7 206.4c-.8 1.6-1.2 3.4-1.2 5.2 0 2.2.8 4.6 2.6 6.2 1.9 1.5 4.1 2 6.4 2h23.5c2.4 0 4.7-.8 6.8-2.1 2.1-1.4 3.8-3.1 4.6-5.3l39.2-80.2h94.5l9.3 79.1c.4 2 1.1 3.9 2.2 5.4 1.6 2.2 4.2 3.1 6.6 3.1h23.3c2.7 0 5.5-.8 7.5-2.8s2.6-4.8 2.6-7.6v-1.7l-29.1-206.9c-.8-5.9-2.5-10.9-5-14.9m-95.8 113 49.2-88.6c1.9-3.5 6.6-4.2 9.4-4 6.1.3 6.7 4 6.7 4l10.4 88.6z" fill="#a6a8ab"/><path d="m1563.4 96.6c-75.7 13.1-178.5 22.9-255.9 46-1.2.3-1 1 .3.9 186.9-5.6 389.2-4.7 540.2.4.4 0 .9-.7.8-1-3.6-17.9-17.5-38.1-59.4-37.9h-24.2s-.6.4-.5.6c6.8 17.1-12.3 28.4-24.7 18.1-5.2-4.4-10.4-15.2 2.9-24.5 9.8-6.9 25.2-16.9 34.1-22.6 32-20.3 27.5-49.4-15-52.7-102.6-7.6-285.9-18.1-358.4-23.9-1.6-.1-2.5 1.1-1.4 1.7 59.9 32.5 114.4 35.4 174.4 57.7 34.1 12.7 27.3 30.2-13.2 37.2" fill="#0081c6"/></svg>
+                            </div>
+                                <div class="airline-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.438 302.1115902939018 142.2640366546909"><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="203.08" x2="203.08" y2="43.833"><stop offset=".033" stop-color="#19aade"/><stop offset=".951" stop-color="#134e8e"/></linearGradient><linearGradient id="b" gradientUnits="userSpaceOnUse" x1="252.584" x2="252.584" y1="54.972" y2="109.178"><stop offset=".132" stop-color="#e02527"/><stop offset=".742" stop-color="#a1141c"/></linearGradient><linearGradient id="c" gradientUnits="userSpaceOnUse" x1="219.617" x2="247.5" y1="66.952" y2="66.952"><stop offset=".005" stop-color="#71251d"/><stop offset=".742" stop-color="#c73127"/></linearGradient><linearGradient id="d" gradientUnits="userSpaceOnUse" x1="209.568" x2="257.86" y1="62.615" y2="62.615"><stop offset=".148" stop-color="#e8ebee"/><stop offset=".742" stop-color="#95a5af"/></linearGradient><path d="M174.393.007h13.805s8.225-.445 13.426 5.826l30.143 37.995h-21.152s-9.373.41-13.17-5.953z" fill="url(#a)"/><path d="M221.885 78.276l12.412 20.517s4.562 10.385 19.633 10.385h31.66l-44.834-54.206-18.871 4.308c0-.001-5.191 6.838 0 18.996z" fill="url(#b)"/><path d="M247.5 63.133l-7.266-8.803-18.311 4.949s-5.191 6.839 0 18.997l.762 1.297c-.061-.804-.624-13.35 24.815-16.44z" fill="url(#c)"/><path d="M222.629 79.54s-5.736-14.745 12.98-21.808c0 0 13.332-4.769 22.25-1.942 0 0-.617-10.772-22.516-10.066 0 0-11.564-.088-20.66 3.091 0 0-9.625 2.56-2.473 13.596z" fill="url(#d)"/><g fill="#37495a"><path d="M290.584 104.829h-1.539v-.537h3.746v.537h-1.545v4.358h-.662zM297.618 107.038c-.037-.684-.082-1.504-.074-2.114h-.023a26.308 26.308 0 0 1-.639 1.859l-.893 2.375h-.496l-.818-2.331c-.24-.69-.441-1.322-.584-1.903h-.016a66.89 66.89 0 0 1-.098 2.165l-.135 2.099h-.623l.352-4.896h.834l.863 2.368c.211.603.383 1.14.51 1.648h.023c.127-.494.309-1.031.533-1.648l.9-2.368h.834l.314 4.896h-.639zM101.422 36.849c-8.137-2.736-7.715 6.535-7.715 6.535v11.35h-5.251V39.871c0-2.972-.042-5.089-.17-7.07h4.568l.17 3.53s1.666-5.622 8.694-3.551zM104.022 54.733V32.801h5.294v21.933h-5.294zM104.022 29.525v-4.788h5.294v4.788zM129.864 54.058c-1.111.54-3.288 1.171-5.892 1.171-6.489 0-10.716-4.414-10.716-11.214 0-6.575 3.701-11.826 11.57-11.708 1.92.029 3.885.45 5.081 1.035l-.005 4.543c-.854-.405-3.027-1.255-4.905-1.255-4.013 0-6.404 3.107-6.361 7.115 0 4.504 2.775 7.07 6.361 7.07 1.836 0 3.807-.718 4.832-1.168zM150.799 49.464c0 1.981.049 3.841.275 5.191h-4.986l-.318-2.355h-.134c-1.349 1.712-3.639 2.928-6.47 2.928-4.402 0-6.872-3.199-6.872-6.53 0-5.539 4.896-8.332 12.981-8.287v-.36c0-1.441-.584-3.828-4.447-3.828-2.156 0-4.931 1.011-6.414 1.957l-.222-4.365c1.618-.99 4.121-1.49 7.579-1.51 7.585-.043 9.027 4.458 9.027 9.232v7.927zm-5.39-5.45c-3.906-.09-7.635.766-7.635 4.098 0 2.162 1.392 3.154 3.145 3.154 2.201 0 3.818-1.441 4.313-3.018a3.99 3.99 0 0 0 .178-1.217v-3.017zM155.077 40.037c0-2.522-.025-5.357-.154-7.249l4.947.013.049 2.907.336-.486c1.457-1.627 2.123-2.916 6.617-2.916 3.629 0 7.387 2.476 7.387 9.412v12.896h-5.252V42.348c0-3.152-1.109-5.539-3.971-5.539-2.092 0-3.887 1.576-4.443 3.243-.17.495-.213 1.171-.213 1.801v12.762h-5.328zM158.381 86.15c1.359.766 4.312 1.685 7.076 1.449 2.611-.223 3.785-1.124 3.785-2.564 0-1.487-.918-2.433-3.883-3.198-5.598-1.447-7.434-4.002-7.383-6.569 0-3.872 2.932-6.718 9.01-6.718 2.621 0 4.627.584 5.984 1.259v4.043c-2.695-1.17-4.297-1.448-6.385-1.448-2.135 0-3.299 1.044-3.299 2.396 0 1.396 1.08 2.184 4.123 3.062 4.549 1.314 7.086 3.478 7.111 6.721.033 4.635-3.654 6.888-9.914 6.891-3.094.002-4.846-.672-6.328-1.244zM54.13 32.306c-1.748 0-3.082.343-4.263 1.199-1.005.63-1.797 1.507-2.541 2.723h-.086c-.919-2.432-3.218-4.021-6.017-4.021-3.584 0-5.502 1.645-6.552 3.355h-.131l-.218-2.762h-4.635c.132 1.892.175 4.008.175 6.53v15.402h5.247V41.763c0-.63.088-1.261.306-1.802.481-1.531 1.837-3.152 3.849-3.152 2.492 0 3.673 2.162 3.673 5.224v12.701h5.248V43.809c.044-2.757.621-4.385.952-5.084.56-1.039 1.428-1.916 3.071-1.916 2.579 0 3.803 2.162 3.803 5.811v12.114h5.538V41.808c.223-7.194-2.811-9.502-7.419-9.502zM22.18 54.667h5.492L16.971 25.729h-5.889L0 54.667h5.323l2.29-6.458h12.272zM8.917 44.347l4.824-13.426 4.75 13.426zM57.937 91.066h5.492L52.727 62.128h-5.889L35.756 91.066h5.323l2.29-6.459H55.64zM44.673 80.745l4.824-13.426 4.75 13.426zM88.925 73.134c-8.137-2.737-7.715 6.534-7.715 6.534v11.349h-5.251v-14.86c0-2.973-.042-5.09-.17-7.07h4.568l.171 3.529s1.665-5.621 8.693-3.55zM65.436 91.017V69.086h5.294v21.931zM65.436 65.809v-4.788h5.294v4.788zM102.417 91.017V69.086h5.294v21.931zM102.417 65.809v-4.788h5.294v4.788zM91.988 60.925h5.129v30.142h-5.129zM112.945 76.45c0-2.522-.025-5.357-.153-7.25l4.946.014.049 2.906.335-.487c1.457-1.626 2.122-2.915 6.616-2.915 3.63 0 7.387 2.476 7.387 9.413v12.896h-5.251V78.76c0-3.152-1.111-5.539-3.971-5.539-2.092 0-3.887 1.576-4.442 3.243-.171.494-.214 1.171-.214 1.801v12.762h-5.328zM140.573 81.213c.132 3.963 3.164 6.364 6.592 6.364 2.504 0 4.566-.759 6.191-1.39l.148 4.068c-1.846.767-4.009 1.219-7.086 1.219-6.943 0-11.03-4.414-11.03-11.124 0-6.079 3.025-11.799 10.458-11.799 6.988 0 9.228 5.854 9.228 10.673 0 1.036-.088 1.492-.178 1.988h-14.323zm9.404-3.52c.044-2.088-.845-5.52-4.489-5.52-3.376 0-4.798 3.2-5.02 5.52zM70.305 44.865c.132 3.962 3.165 6.364 6.591 6.364 2.506 0 4.567-.757 6.192-1.389l.148 4.069c-1.844.766-4.01 1.217-7.086 1.217-6.943 0-11.03-4.414-11.03-11.122 0-6.08 3.026-11.8 10.458-11.8 6.987 0 9.228 5.854 9.228 10.671 0 1.036-.087 1.494-.176 1.989H70.305zm9.404-3.519c.044-2.088-.845-5.521-4.489-5.521-3.377 0-4.799 3.201-5.021 5.521z"/></g></svg>
+                                </div>
+                                        <div class="airline-item">
+                                            <svg
+                                                                                                                                                                                    xmlns:dc="http://purl.org/dc/elements/1.1/"
+                                                                                                                                                                                    xmlns:cc="http://creativecommons.org/ns#"
+                                                                                                                                                                                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                                                                                                                                                                                    xmlns:svg="http://www.w3.org/2000/svg"
+                                                                                                                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                                                                                                                    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                                                                                                                                                                                    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                                                                                                                                                                                    version="1.1"
+                                                                                                                                                                                    id="Layer_1"
+                                                                                                                                                                                    x="0px"
+                                                                                                                                                                                    y="0px"
+                                                                                                                                                                                    viewBox="0 0 178.4 50"
+                                                                                                                                                                                    xml:space="preserve"
+                                                                                                                                                                                    inkscape:version="0.48.1 "
+
+                                                                                                                                                                                    sodipodi:docname="flyb.svg"><metadata
+                                                                                                                                                                                    id="metadata3125"><rdf:RDF><cc:Work
+                                                                                                                                                                                        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+                                                                                                                                                                                            rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+                                                                                                                                                                                    id="defs3123">
+                                                                                                                                                                                        
+                                                                                                                                                                                        
+                                                                                                                                                                                    </defs><sodipodi:namedview
+                                                                                                                                                                                    pagecolor="#ffffff"
+                                                                                                                                                                                    bordercolor="#666666"
+                                                                                                                                                                                    borderopacity="1"
+                                                                                                                                                                                    objecttolerance="10"
+                                                                                                                                                                                    gridtolerance="10"
+                                                                                                                                                                                    guidetolerance="10"
+                                                                                                                                                                                    inkscape:pageopacity="0"
+                                                                                                                                                                                    inkscape:pageshadow="2"
+                                                                                                                                                                                    inkscape:window-width="1280"
+                                                                                                                                                                                    inkscape:window-height="657"
+                                                                                                                                                                                    id="namedview3121"
+                                                                                                                                                                                    showgrid="false"
+                                                                                                                                                                                    
+
+                                                                                                                                                                                    inkscape:window-x="0"
+                                                                                                                                                                                    inkscape:window-y="0"
+                                                                                                                                                                                    inkscape:window-maximized="1"
+                                                                                                                                                                                    inkscape:current-layer="Layer_1" />
+                                                                                                                                                                                    <style
+                                                                                                                                                                                    type="text/css"
+                                                                                                                                                                                    id="style3057">
+                                                                                                                                                                                        .st0{fill:#FDBE12;}
+                                                                                                                                                                                    </style>
+                                                                                                                                                                                    <g
+                                                                                                                                                                                    id="g3061"
+                                                                                                                                                                                    transform="matrix(1.0832224,0,0,1.0832224,-7.3099064,-12.923319)">
+                                                                                                                                                                                            <g
+                                                                                                                                                                                    id="g3063">
+                                                                                                                                                                                                <path
+                                                                                                                                                                                    style="fill:#fdbe12"
+                                                                                                                                                                                    inkscape:connector-curvature="0"
+                                                                                                                                                                                    id="path3065"
+                                                                                                                                                                                    d="m 96.6,23.7 c -6.9,0 -12.4,5.6 -12.4,12.4 0,6.8 5.6,12.4 12.4,12.4 6.9,0 12.4,-5.6 12.4,-12.4 0,-6.8 -5.5,-12.4 -12.4,-12.4 z m 0,19.9 c -4.1,0 -7.4,-3.3 -7.4,-7.4 0,-4.1 3.3,-7.4 7.4,-7.4 4.1,0 7.4,3.3 7.4,7.4 0,4.1 -3.3,7.4 -7.4,7.4 z"
+                                                                                                                                                                                    class="st0" />
+                                                                                                                                                                                                <path
+                                                                                                                                                                                    style="fill:#fdbe12"
+                                                                                                                                                                                    inkscape:connector-curvature="0"
+                                                                                                                                                                                    id="path3067"
+                                                                                                                                                                                    d="m 156.1,12.9 v 13.3 c -2.1,-1.5 -4.6,-2.5 -7.4,-2.5 -6.9,0 -12.4,5.6 -12.4,12.4 0,6.8 5.6,12.4 12.4,12.4 6.9,0 12.4,-5.6 12.4,-12.4 V 12.9 h -5 z m -7.4,30.7 c -4.1,0 -7.4,-3.3 -7.4,-7.4 0,-4.1 3.3,-7.4 7.4,-7.4 4.1,0 7.4,3.3 7.4,7.4 0,4.1 -3.4,7.4 -7.4,7.4 z"
+                                                                                                                                                                                    class="st0" />
+                                                                                                                                                                                                <rect
+                                                                                                                                                                                    style="fill:#fdbe12"
+                                                                                                                                                                                    id="rect3069"
+                                                                                                                                                                                    
+                                                                                                                                                                                    class="st0"
+                                                                                                                                                                                    y="24.299999"
+                                                                                                                                                                                    x="165.10001" />
+                                                                                                                                                                                                <rect
+                                                                                                                                                                                    style="fill:#fdbe12"
+                                                                                                                                                                                    id="rect3071"
+                                                                                                                                                                                    height="34.599998"
+                                                                                                                                                                                    width="5"
+                                                                                                                                                                                    class="st0"
+                                                                                                                                                                                    y="12.9"
+                                                                                                                                                                                    x="24.299999" />
+                                                                                                                                                                                                <circle
+                                                                                                                                                                                    style="fill:#fdbe12"
+                                                                                                                                                                                    sodipodi:ry="2.7"
+                                                                                                                                                                                    sodipodi:rx="2.7"
+                                                                                                                                                                                    sodipodi:cy="18.9"
+                                                                                                                                                                                    sodipodi:cx="167.7"
+                                                                                                                                                                                    d="m 170.4,18.9 c 0,1.491168 -1.20883,2.7 -2.7,2.7 -1.49117,0 -2.7,-1.208832 -2.7,-2.7 0,-1.491169 1.20883,-2.7 2.7,-2.7 1.49117,0 2.7,1.208831 2.7,2.7 z"
+                                                                                                                                                                                    id="circle3073"
+                                                                                                                                                                                    r="2.7"
+                                                                                                                                                                                    cy="18.9"
+                                                                                                                                                                                    cx="167.7"
+                                                                                                                                                                                    class="st0" />
+                                                                                                                                                                                                <path
+                                                                                                                                                                                    style="fill:#fdbe12"
+                                                                                                                                                                                    inkscape:connector-curvature="0"
+                                                                                                                                                                                    id="path3075"
+                                                                                                                                                                                    d="M 122.8,23.7 C 116.3,23.7 111,29 111,35.6 v 11.9 h 5 v -2.2 -9.7 c 0,-3.9 2.9,-6.9 6.7,-6.9 3.9,0 6.7,3 6.7,6.9 v 9.7 2.2 h 5 V 35.6 c 0.2,-6.5 -5.1,-11.9 -11.6,-11.9 z"
+                                                                                                                                                                                    class="st0" />
+                                                                                                                                                                                                <path
+                                                                                                                                                                                    style="fill:#fdbe12"
+                                                                                                                                                                                    inkscape:connector-curvature="0"
+                                                                                                                                                                                    id="path3077"
+                                                                                                                                                                                    d="m 17.2,18 h 3.7 v -5 h -1.2 -1 -1.4 C 12,13 7.7,17.3 7.7,22.6 v 25.1 h 5 V 32.8 h 5.1 v -5 h -5.1 v -5.3 c 0,-2.5 2,-4.5 4.5,-4.5 z"
+                                                                                                                                                                                    class="st0" />
+                                                                                                                                                                                                <polygon
+                                                                                                                                                                                    style="fill:#fdbe12"
+                                                                                                                                                                                    id="polygon3079"
+                                                                                                                                                                                    points="54.6,24.6 49.1,24.6 43.4,38.6 37.7,24.3 32.2,24.3 40.6,45.4 35.7,57.3 41.2,57.3 "
+                                                                                                                                                                                    class="st0" />
+                                                                                                                                                                                                <path
+                                                                                                                                                                                    style="fill:#fdbe12"
+                                                                                                                                                                                    inkscape:connector-curvature="0"
+                                                                                                                                                                                    id="path3081"
+                                                                                                                                                                                    d="m 69.3,23.7 c -2.8,0 -5.3,0.9 -7.4,2.5 V 12.9 h -5 v 23.2 c 0,1.9 0.5,3.8 1.2,5.4 1.1,0.2 2.5,0.4 3.1,0.5 0.1,0 0.2,0 0.2,0 0.8,-0.6 2.9,-2 3.7,-2.7 0,0 0,0 0,-0.1 -0.2,-0.1 -1.6,-1 -4.1,-2.4 -0.5,-0.3 -0.6,-0.3 -0.1,-0.7 0.3,-0.2 0.6,-0.5 0.8,-0.7 0.3,-0.3 0.6,-0.4 1,-0.4 1.3,0 4.8,1.2 6.2,1.2 0.2,0 0.4,-0.1 0.5,-0.2 1,-0.6 3.2,-1.9 4.3,-2.4 0.9,-0.5 3.3,-1.7 4.2,-0.4 0.3,0.4 0.9,1.3 -1.7,3.2 -1,0.8 -11.8,7 -15.3,9 2.2,2 5.1,3.2 8.4,3.2 6.9,0 12.4,-5.6 12.4,-12.4 0,-6.8 -5.6,-12.5 -12.4,-12.5 z"
+                                                                                                                                                                                    class="st0" />
+                                                                                                                                                                                            </g>
+                                                                                                                                                                                        </g>
+                                                                                                                                                                                    </svg>
+                                        </div>
+                                        <div class="airline-item">
+                                            <svg enable-background="new 0 0 2499.8 581.1" viewBox="0 0 2499.8 581.1" xmlns="http://www.w3.org/2000/svg"><path d="m2000.9 435.2 75.2-290.8h83.2s21.1-2 32 6.6 13.9 21.9 13.9 21.9l45.2 140.7 59-169.2h80.5s20 0 30.4 8.1 13.5 20.3 13.5 20.3l66 262.4h-78.2l-59-223.6-61.9 170.5h-82.9s-10 1-19.5-5.5c-9.5-6.4-9.8-12.4-9.8-12.4l-50.4-152.6-57.9 223.6zm-775.1-290.8v58l139.6 9.4v223.4h80.6v-223.4l139.6-9.4v-58zm-232 0-145.4 290.8h89.4l25.4-53.5h162.1l24.8 53.5h88.9l-138-271.7s-4.5-10-12.3-14.5-16-4.6-16-4.6zm49.3 62.8 53.4 115.4h-107.6zm-501.8-62.8v290.8h245.5l33.5-66.9h-194.9v-223.9zm1177.6 0-145.4 290.8h89.4l25.4-53.5h162.1l24.8 53.5h88.9l-137.9-271.7s-4.5-10-12.3-14.5-16-4.6-16-4.6zm49.4 62.8 53.4 115.4h-107.7z" fill="#2a0088"/><path d="m41.6 237.8 64.5-18.4s-.7-4.3-3-6.4-6.5-3.4-6.5-3.4l-89.7-32.6s-2.8-1-4.9.2c-2.1 1.2-2 4.1-2 4.1v41.7s-.2 4 5.6 12.9c5.8 9 19.5 6.7 19.5 6.7zm256.9-100.6 60-33.6s.9-5.8-1.4-7.9-5.1-2.8-5.1-2.8l-259.2-92.5s-2.8-1-4.9.2-2 4.1-2 4.1v36s0 8.3 5.7 17.3c5.8 8.9 15.2 11.3 15.2 11.3zm0 104.7 60-31.1s1.3-7.9-1-10-5.4-3.2-5.4-3.2l-345.2-125.4s-2.8-1-4.9.2c-2.1 1.2-2 4.1-2 4.1v36s0 8.3 5.7 17.3c5.8 8.9 15.2 11.3 15.2 11.3z" fill="#ed1651"/><path d="m352 92.9s3.5.5 6.5 3.4 3 6.4 3 6.4v47.6s-.1 6.5-2.8 12.4-6.6 7.2-6.6 7.2l-8.1 3-259.1 94.1s-1.2.4-2.9.4c-1.6 0-2.9-.4-2.9-.4l-72.1-26.2s-1.8-.4-4.3-4.4c-2.9-4.5-2.7-13.4-2.7-13.4s.4 4.5 3 6.7 9.4-.2 9.4-.2l331.6-120.4s13.2-5.4 13.2-10.8c-.1-3.8-5.2-5.4-5.2-5.4zm0 104.7s3.5.5 6.5 3.4 3 6.4 3 6.4v47.6s-.1 6.5-2.8 12.4c-2.7 5.8-6.6 7.2-6.6 7.2l-8.1 3-259.1 94.1v-63.8l259.1-94.1s13.2-5.4 13.2-10.8c-.1-3.8-5.2-5.4-5.2-5.4zm-128.6 167.5c2.5 2.5 2.5 7.9 2.5 7.9v35.6s-.1 6.5-2.8 12.4c-2.7 5.8-6.6 7.2-6.6 7.2l-8.1 3-123.5 44.9v-63.8l123.5-44.8c0-.1 12.5-4.8 15-2.4zm-79.6 133.2c2.5 2.5 2.5 7.9 2.5 7.9v35.6s-.1 6.5-2.8 12.4-6.6 7.2-6.6 7.2l-8.1 3-43.8 16.7v-63.8l43.8-16.7c-.1 0 12.5-4.8 15-2.3z" fill="#2a0088"/></svg>
+                                        </div>
+                                        <div class="airline-item">
+                                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 225.99 53.3" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs>
+                        <style>
+                        .cls-1{fill:#153e69;}.cls-2{fill:#9e202d;}
+                        </style>
+                        </defs>
+                        <title>
+                        jetsmart-colored
+                        </title>
+                        <g id="IRWs97">
+                        <path class="cls-1" d="M68,26.9a9,9,0,0,0,.3-1.6c.9-3.7,3.4-5.9,6.9-7a18.86,18.86,0,0,1,7.1-.6,29,29,0,0,1,7.1,1.5.53.53,0,0,1,.4.7l-.9,6c-.9-.2-1.8-.5-2.7-.7a19.57,19.57,0,0,0-7.2-.6,6.15,6.15,0,0,0-2.3.7,2.75,2.75,0,0,0-.3,4.5,11.43,11.43,0,0,0,2.9,1.5,50.51,50.51,0,0,1,6.1,2.3,10.06,10.06,0,0,1,4.3,3.6,8.71,8.71,0,0,1,1.4,4.9,10.24,10.24,0,0,1-8.3,10.6,12.59,12.59,0,0,1-2.7.4c-.1,0-.1,0-.2.1H76.7a8.75,8.75,0,0,0-1.6-.2,21.21,21.21,0,0,1-6.9-2.1c-.2-.4-.3-.5-.2-.9.3-2,.6-4.1.9-6.1.2,0,.4.2.6.3a19.92,19.92,0,0,0,9.6,2.2,6.6,6.6,0,0,0,2.7-.6,3.11,3.11,0,0,0,1.5-4.4A5.39,5.39,0,0,0,81.7,40a33.83,33.83,0,0,0-4.4-1.8,26.49,26.49,0,0,1-5.4-2.5,10.7,10.7,0,0,1-2.6-2.6,13.27,13.27,0,0,1-.9-2.1,10.48,10.48,0,0,1-.4-3.5q.15-.45,0-.6Z" transform="translate(-0.01 0.1)">
+                        </path>
+                        <path class="cls-2" d="M31.6-.1c0,.1.1.1.2.1a3,3,0,0,1,2.1,3.5c-.3,2.1-.5,4.1-.7,6.2-.3,2.3-.5,4.5-.8,6.8-.2,1.9-.4,3.9-.6,5.8-.3,2.1-.6,4.3-.9,6.4a39.08,39.08,0,0,1-1.4,6.8,21.31,21.31,0,0,1-4.1,7.9,11.61,11.61,0,0,1-9.9,4.1A18.37,18.37,0,0,1,5.4,44,13.32,13.32,0,0,1,.1,35.5a3.36,3.36,0,0,1,.2-2.2,2.85,2.85,0,0,1,3.3-1.2A2.08,2.08,0,0,1,5,33.7c.2.6.3,1.2.5,1.8a9.06,9.06,0,0,0,5.6,5.7,10.81,10.81,0,0,0,5.6.8,7.52,7.52,0,0,0,5.7-3.7,17.06,17.06,0,0,0,2.4-6.5c.6-3.7,1-7.4,1.4-11.1.2-2.3.5-4.6.8-7,.3-2.6.5-5.3.7-7.9.1-1,.2-2.1.3-3.1A3,3,0,0,1,30.4,0a.1.1,0,0,0,.1-.1Z" transform="translate(-0.01 0.1)">
+                        </path>
+                        <path class="cls-1" d="M226,18.3c-.4,1.7-.9,3.5-1.3,5.2-.1.4-.2.8-.3,1.3,0,.3-.2.3-.4.3h-7.8c-.4,0-.5.1-.5.4V51.7c0,.5,0,.5-.5.5h-6.8c-.3,0-.4-.1-.4-.4V25.5c0-.4-.1-.5-.5-.5h-7.7c-.3,0-.4-.1-.5-.4-.5-2.1-1-4.1-1.5-6.2-.1-.4,0-.4.3-.4h21.4C221.7,18.2,223.8,18.2,226,18.3ZM124.2,31.2c-.2.1-.2.2-.3.3-2.5,6.8-5.4,13.6-8,20.4-.1.3-.2.4-.6.4h-4.4c-.2,0-.3-.1-.4-.3-2.4-6.1-4.8-12.2-7.2-18.2-.3-.8-.6-1.7-1-2.6a2,2,0,0,0-.1.7c.1,6.7,0,13.3,0,20,0,.3-.1.3-.3.3H95.8c-.3,0-.3-.1-.3-.3V18.5c0-.3.1-.4.4-.4h7.7c.3,0,.4.1.5.4,3,7.6,6.1,15.1,8.9,22.7,0,.1,0,.3.2.3s.1-.2.1-.3c2.6-6.9,5.5-13.8,8.2-20.7a18,18,0,0,0,.8-2.1c.1-.2.2-.3.4-.3h7.8c.3,0,.4.1.4.4V51.9a.27.27,0,0,1-.3.3h-6.4c-.3,0-.3-.1-.3-.3V33.2a9.7,9.7,0,0,1,.1-1.7c.2,0,.2-.1.2-.3Zm66.2,6.9c2.6,4.7,5.3,9.5,7.9,14.2-.1.1-.3,0-.4,0h-8.2a.46.46,0,0,1-.5-.3c-1.9-4-3.8-8.1-5.7-12.1a.46.46,0,0,0-.5-.3h-4.1c-.3,0-.4.1-.4.4V51.9c0,.3-.1.4-.4.4h-6.9c-.3,0-.4-.1-.4-.4V18.6c0-.4.1-.5.4-.5h13.2a15.07,15.07,0,0,1,5.9,1.1,8.61,8.61,0,0,1,5.4,6.3,13.47,13.47,0,0,1-.2,6.9A7.12,7.12,0,0,1,190.4,38.1Zm-11.8-8.9v4.3c0,.3.1.3.3.3h2.4a20.48,20.48,0,0,0,3.5-.1,3.23,3.23,0,0,0,3.1-2.6,8.56,8.56,0,0,0,0-3.9,2.87,2.87,0,0,0-2.3-2.4,9.85,9.85,0,0,0-1.7-.2H179c-.3,0-.4.1-.4.3v4.3ZM167.4,52.3h-8.2c-.3,0-.4-.1-.5-.4-.6-2-1.1-4-1.7-5.9-.1-.3-.2-.4-.5-.4H144.9c-.3,0-.4.1-.5.4-.6,2-1.1,4-1.7,6-.1.2-.1.3-.3.3h-7.9c.3-.8.5-1.6.8-2.4l9.3-27,1.5-4.5c.1-.2.2-.3.4-.3h8.6c.2,0,.3,0,.4.2,1.6,4.7,3.3,9.4,4.9,14.1,2.3,6.5,4.5,12.9,6.8,19.4C167.4,52.1,167.4,52.2,167.4,52.3ZM151,24h-.1c-1.3,5.1-2.9,10.1-4.3,15.3h7.5c.4,0,.9.1,1.1-.1s-.1-.7-.2-1.1c-1.1-3.9-2.2-7.8-3.2-11.7A11.28,11.28,0,0,1,151,24Z" transform="translate(-0.01 0.1)">
+                        </path>
+                        <path class="cls-2" d="M68,26.9a1.09,1.09,0,0,1,.1.5,10.48,10.48,0,0,0,.4,3.5,13.27,13.27,0,0,0,.9,2.1,15,15,0,0,1-5.2,5.7A8.76,8.76,0,0,1,58.1,40a6.38,6.38,0,0,1-4.8-3.6c-.3-.6-.5-1.2-.8-1.8-.6.6-1.2,1.1-1.8,1.6a14.36,14.36,0,0,1-6.1,3.2,7.72,7.72,0,0,1-9.2-5,13.43,13.43,0,0,1-.7-2.7c0-.2-.1-.3-.3-.4a2.12,2.12,0,0,1,.2-3.7A.55.55,0,0,0,35,27a12.56,12.56,0,0,1,3.4-6.3,7,7,0,0,1,5.1-2.2,4.07,4.07,0,0,1,4.2,3.7,8.18,8.18,0,0,1-2.6,6.9,9.94,9.94,0,0,1-5.7,3c-.2,0-.2.1-.2.3.6,1.6,1.6,2.8,3.5,2.9a7.24,7.24,0,0,0,5.7-2.2,17.86,17.86,0,0,0,3.1-3.6c.1-.1.1-.2.1-.4a38.23,38.23,0,0,1,.8-7.5c.3-2,.7-4,1.1-6,.1-.3,0-.4-.3-.4-2.4,0-4.8-.1-7.2-.1H44.8a2,2,0,0,1,0-4c2.4,0,4.9-.1,7.3-.1h2a.27.27,0,0,0,.3-.3l1.2-5.1a2.39,2.39,0,0,1,2.5-1.8,2.34,2.34,0,0,1,2.1,2.1,13.33,13.33,0,0,1-.3,2.8l-.3,1.8c-.1.3,0,.5.4.4,3,0,6-.1,9-.1a4.06,4.06,0,0,1,1.9.4,1.9,1.9,0,0,1,1,1.8,2,2,0,0,1-1.2,1.7,5.34,5.34,0,0,1-2.5.5H59.4c-.4,0-.5.1-.6.5-.7,3.8-1.5,7.5-2.1,11.4a14.89,14.89,0,0,0,.6,6.6,1.42,1.42,0,0,1,.2.6,2.23,2.23,0,0,0,2.9,1.4,6,6,0,0,0,3.2-2,20.64,20.64,0,0,0,3.5-5.2c.4-.6.6-1.1.9-1.6Zm-28.3,1a4.73,4.73,0,0,0,4-3.3,2.34,2.34,0,0,0-.3-1.8.63.63,0,0,0-.8-.3,3.38,3.38,0,0,0-1.2.6,7,7,0,0,0-2.3,4.3C39,27.9,39,28,39.7,27.9Z" transform="translate(-0.01 0.1)">
+                        </path>
+                        </g>
+                        </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+    <section class="promotional-banner">
+        <div class="container">
+            <div class="banner-content">
+                <div class="banner-left"> 
+                    <div class="banner-text">
+                        <h2>AHORRÁ <span class="highlight">HASTA 25%</span></h2>
+                        <p class="banner-subtitle">pagando el pasaje en dólares</p>
+                    </div>
+                    <div class="banner-divider"></div>
+                    <div class="banner-description">
+                        <p>
+                            Pagando el resumen de tu tarjeta de crédito con dólares en cuenta no aplica el 30% de percepción AFIP. 
+                            También podés abonar con transferencia, depósito o efectivo en dólares. 
+                            <a href="#" class="banner-link">Más info</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="banner-right">
+                    <div class="piggy-bank">
+                        <div class="piggy-bank-icon">💰</div>
+                        <div class="coins">
+                            <div class="coin coin-1">$</div>
+                            <div class="coin coin-2">$</div>
+                            <div class="coin coin-3">$</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mas-destino">
+        <div class="container">
+            <div class="destino-grid">
+                <a style="text-decoration: none;" href="../vuelos/conoer-mas/conocer-mas1.html">
+                <div class="mas-destino-card" >
+                    <div class="card-image">
+                        <img src="https://i.ibb.co/ch5BghHj/Madrid.jpg" alt="Madrid">
+                    </div>
+                    <div class="card-contenido">
+                        <h3>Madrid</h3>
+                        <div class="price-circle cambio" data-precio="968635">AR$ 968.635</div>
+                        <p class="label">Desde Buenos Aires</p>
+                            
+                                <button class="know-more-btn">Conocer más</button>
+                          
+                    </div>
+                </div>
+                </a>  
+                <a style="text-decoration: none;" href="../vuelos/conoer-mas/conocer-mas2.html">
+                <div class="mas-destino-card" >
+                    <div class="card-image">
+                        <img src="https://i.ibb.co/FkdWjfL2/rio-de-janeiro.png" alt="Rio De Janeiro">
+                    </div>
+                    <div class="card-contenido">
+                        <h3>Rio de Janeiro</h3>
+                        <div class="price-circle cambio" data-precio="251702">AR$ 251.702</div>
+                        <p class="label">Desde Buenos Aires</p>
+                        <button class="know-more-btn">Conocer más</button>
+                        
+                    </div>
+                </div>
+            </a>
+                <a style="text-decoration: none;" href="./conoer-mas/conocer-mas3.html">
+                <div class="mas-destino-card">
+                    <div class="card-image">
+                        <img src="https://i.ibb.co/BVZmZM3h/Miami.jpg" alt="Miami">
+                    </div>
+                    <div class="card-contenido">
+                        <h3>Miami</h3>
+                        <div class="price-circle cambio" data-precio="671414">AR$ 671.414</div>
+                        <p class="label">Desde Buenos Aires</p> 
+                        <button class="know-more-btn">Conocer más</button>
+                    </div>
+                </div>
+                </a>
+                <a style="text-decoration: none;" href="./conoer-mas/conocer-mas4.html">
+                <div class="mas-destino-card">
+                    <div class="card-image">
+                        <img src="https://images.pexels.com/photos/819764/pexels-photo-819764.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Barcelona">
+                    </div>
+                    <div class="card-contenido">
+                        <h3>Barcelona</h3>
+                        <div class="price-circle cambio" data-precio="909695">AR$ 909.695</div>
+                        <p class="label">Desde Buenos Aires</p>
+                        <button class="know-more-btn">Conocer más</button>
+                    </div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="../vuelos/conoer-mas/conocer-mas5.html">
+                <div class="mas-destino-card" onclick="selectDestination('Rio De Janeiro')">
+                    <div class="card-image">
+                        <img src="https://i.ibb.co/FkC8FL3C/santiago.jpg" alt="Santiago de chile">
+                    </div>
+                    <div class="card-contenido">
+                        <h3>Santiago de Chile</h3>
+                        <div class="price-circle cambio" data-precio="211284">AR$ 211.284</div>
+                        <p class="label">Desde Buenos Aires</p>
+                        <button class="know-more-btn">Conocer más</button>
+                    </div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="../vuelos/conoer-mas/conocer-mas6.html">
+                <div class="mas-destino-card" onclick="selectDestination('Rio De Janeiro')">
+                    <div class="card-image">
+                        <img src="https://i.ibb.co/zWbLJSFt/milan.jpg" alt="Milan">
+                    </div>
+                    <div class="card-contenido">
+                        <h3>Milan</h3>
+                        <div class="price-circle cambio" data-precio="1084346">AR$ 1.084.346</div>
+                        <p class="label">Desde Buenos Aires</p>
+                        <button class="know-more-btn">Conocer más</button>  
+                    </div>
+                </div>
+            </a>
+                
+            </div>
+        </div>
+    </section>  
+        </main>
+
+            <footer>
+                    <div class="footer-container">
+                        <div class="footer-content">
+                            <div class="footer-section">
+                                <h2 class="footer-title">Adventure Viajes</h2>
+                                <p>Tu agencia de viajes confiable para vivir aventuras inolvidables.</p>
+                            </div>
+                            
+                            <div class="footer-section">
+                                <h3 class="footer-title">Sobre Adventure Viajes</h3>
+                                <ul class="footer-links">
+                                    <li><a href="#">Preguntas frecuentes</a></li>
+                                    <li><a href="#">Consultar aquí</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="footer-section">
+                                <h3 class="footer-title">Seguinos en:</h3>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-facebook"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="footer-bottom">
+                            <p>Copyright © 2025 AdventureViajes. Todos los derechos reservados.</p>
+                        </div>
+                    </div>
+            </footer>    
+    <script type="module" src="vuelos.js"></script>
+    <script src="vuelosF.js"></script>
+    <script src="../cambioMonedas.js"></script>
+    <!-- <script src="../guardarMonedas.js"></script> -->
+</body>
+</html>

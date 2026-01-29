@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adventure Viajes - Tu próxima aventura te espera</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="paquetes.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <!-- Logo -->
+          <div class="logo">
+            <div class="logo-icon">
+              <img
+                src="https://i.ibb.co/wfpGYss/Logo-con-letras.png"
+                alt="Adventure Viajes"
+                class="logo-image"
+              />
+            </div>
+          </div>
+
+          <button class="menu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-menu"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M4 8l16 0" />
+              <path d="M4 16l16 0" />
+            </svg>
+          </button>
+          <nav class="nav-compu">
+            <a style="text-decoration: none" href="../vuelos/vuelos.html">
+              <div class="btn-nav">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 10h4a2 2 0 0 1 0 4h-4l-4 7h-3l2 -7h-4l-2 2h-3l2 -4l-2 -4h3l2 2h4l-2 -7h3z"
+                  />
+                </svg>
+                <span>Vuelos</span>
+              </div>
+            </a>
+
+            <a
+              style="text-decoration: none"
+              href="../contactanos/contactanos.html"
+            >
+              <div class="btn-nav">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+                <span>Contáctanos</span>
+              </div>
+            </a>
+            <a style="text-decoration: none" href="../autos/autos.html">
+              <div class="btn-nav">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M5 17h-2v-4m-1 -8h11v12m-4 0h6m4 0v-6a2 2 0 0 0 -2 -2h-2"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+                <span>Autos</span>
+              </div>
+            </a>
+          </nav>
+          <div class="compu-user">
+            <!-- Menú desplegable de monedas -->
+            <div class="currency-dropdown" id="currencyDropdown">
+              <button class="currency-btn" id="currencyBtn">
+                <span class="currency-flag" id="currentFlag">🇦🇷</span>
+                <span class="currency-code" id="currentCode">AR$</span>
+                <svg
+                  class="dropdown-arrow"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 9l6 6 6-6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+
+              <div class="currency-menu" id="currencyMenu">
+                <div
+                  class="currency-option"
+                  data-code="AR$"
+                  data-flag="🇦🇷"
+                  data-name="Peso Argentino"
+                >
+                  <img
+                    class="img-banderas"
+                    src="../imagenes/argentina-flag-icon.png"
+                    alt="arg"
+                  />
+                  <div class="currency-info">
+                    <span class="currency-code">AR$</span>
+                    <span class="currency-name">Peso Argentino</span>
+                  </div>
+                </div>
+                <div
+                  class="currency-option"
+                  data-code="USD"
+                  data-flag="🇺🇸"
+                  data-name="Estados Unidos"
+                >
+                  <img
+                    class="img-banderas"
+                    src="../imagenes/estados-unidos.png"
+                    alt="eu"
+                  />
+                  <div class="currency-info">
+                    <span class="currency-code">USD</span>
+                    <span class="currency-name">Estados Unidos</span>
+                  </div>
+                </div>
+                <div
+                  class="currency-option"
+                  data-code="R$"
+                  data-flag="🇧🇷"
+                  data-name="Reales"
+                >
+                  <img
+                    class="img-banderas"
+                    src="../imagenes/brazil-flag-icon.png"
+                    alt="br"
+                  />
+                  <div class="currency-info">
+                    <span class="currency-code">R$</span>
+                    <span class="currency-name">Reales</span>
+                  </div>
+                </div>
+                <div
+                  class="currency-option"
+                  data-code="EU"
+                  data-flag="🇪🇺"
+                  data-name="Euros"
+                >
+                  <img
+                    class="img-banderas"
+                    src="../imagenes/espana.png"
+                    alt="esp"
+                  />
+                  <div class="currency-info">
+                    <span class="currency-code">EU</span>
+                    <span class="currency-name">Euros</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="user-item">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <circle
+                  cx="12"
+                  cy="7"
+                  r="4"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+              <p id="nombre"></p>
+            </div>
+            <div class="user-item-dropdown" id="user-itemDropdown">
+              <a style="text-decoration: none" href="../carrito/carrito.html">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="8"
+                    cy="21"
+                    r="1"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <circle
+                    cx="19"
+                    cy="21"
+                    r="1"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+                <span style="padding: 10px">Carrito</span>
+              </a>
+              <a href="../ini-reg/sesion.html"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-logout-2"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M10 8v-2a2 2 0 0 1 2 -2h7a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-2"
+                  />
+                  <path d="M15 12h-12l3 -3" />
+                  <path d="M6 15l-3 -3" />
+                </svg>
+                <span style="margin: 10px">Cerrar Sesion</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <section class="buscador">
+          <div class="buscador-fondo"></div>
+          <div class="buscador-container">
+            <div class="search-form">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>¿A donde desea ir?</label>
+                  <div class="inputs">
+                    <svg
+                      class="input-icon"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      />
+                      <circle
+                        cx="12"
+                        cy="10"
+                        r="3"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      />
+                    </svg>
+                    <input
+                      type="text"
+                      placeholder="Ingresa ciudad, país o región"
+                      id="origin"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Mes de salida</label>
+                  <div class="inputs">
+                    <svg
+                      class="input-icon"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        x="3"
+                        y="4"
+                        width="18"
+                        height="18"
+                        rx="2"
+                        ry="2"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      />
+                      <line
+                        x1="16"
+                        y1="2"
+                        x2="16"
+                        y2="6"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      />
+                      <line
+                        x1="8"
+                        y1="2"
+                        x2="8"
+                        y2="6"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      />
+                      <line
+                        x1="3"
+                        y1="10"
+                        x2="21"
+                        y2="10"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      />
+                    </svg>
+                    <select name="" id="">
+                      <option value="" disabled selected>
+                        Cualquier Momento
+                      </option>
+                      <option value="Enero">Enero</option>
+                      <option value="Febrero">Febrero</option>
+                      <option value="Marzo">Marzo</option>
+                      <option value="Abril">Abril</option>
+                      <option value="Mayo">Mayo</option>
+                      <option value="Junio">Junio</option>
+                      <option value="Julio">Julio</option>
+                      <option value="Agosto">Agosto</option>
+                      <option value="Septiembre">Septiembre</option>
+                      <option value="Octubre">Octubre</option>
+                      <option value="Noviembre">Noviembre</option>
+                      <option value="Diciembre">Diciembre</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Pasajeros, clase</label>
+                  <div class="inputs">
+                    <svg
+                      class="input-icon"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      />
+                      <circle
+                        cx="9"
+                        cy="7"
+                        r="4"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M23 21v-2a4 4 0 0 0-3-3.87"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M16 3.13a4 4 0 0 1 0 7.75"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      />
+                    </svg>
+                    <select id="pasajeros">
+                      <option>1 Pasajero, Eco</option>
+                      <option>2 Pasajeros, Eco</option>
+                      <option>3 Pasajeros, Eco</option>
+                      <option>1 Pasajero, Premium</option>
+                      <option>2 Pasajeros, Premium</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button class="buscar-btn">Buscar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- Sección del carrusel con fondo -->
+      <section class="carousel-section">
+        <div class="carousel-container">
+          <div class="carousel-wrapper">
+            <div class="carousel-track" id="carouselTrack">
+              <!-- Slide 1 -->
+              <div class="carousel-slide">
+                <a
+                  style="text-decoration: none"
+                  href="../paquetes/conocer-mas/calafate.html"
+                >
+                  <div class="destination-card">
+                    <div
+                      class="card-image"
+                      style="
+                        background-image: url('https://th.bing.com/th/id/OIP.C_cRUKqo8fzdqnwtNIBD6AHaD9?r=0&rs=1&pid=ImgDetMain');
+                      "
+                    >
+                      <div class="card-content">
+                        <span class="trip-type">3 NOCHES - JUNIO</span>
+                        <h2 class="destination-name">El Calafate</h2>
+                        <div class="price-info">
+                          <span class="price cambio" data-precio="457000"
+                            >AR$ 457.000 / Persona</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  style="text-decoration: none"
+                  href="../paquetes/conocer-mas/estocolmo.html"
+                >
+                  <div class="destination-card">
+                    <div
+                      class="card-image"
+                      style="
+                        background-image: url('https://a.cdn-hotels.com/gdcs/production160/d1943/a0fe0b3e-1469-412a-a45e-276f65e77702.jpg');
+                      "
+                    >
+                      <div class="card-content">
+                        <span class="trip-type">5 NOCHES - NOVIEMBRE</span>
+                        <h2 class="destination-name">Estocolmo</h2>
+                        <div class="price-info">
+                          <span class="price cambio" data-precio="850000"
+                            >AR$ 850.000 / Persona</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  style="text-decoration: none"
+                  href="./conocer-mas/miami.html"
+                >
+                  <div class="destination-card">
+                    <div
+                      class="card-image"
+                      style="
+                        background-image: url('https://www.tripsavvy.com/thmb/iIuadVB5VqfQnXmee3DyK5HcGuk=/2121x1414/filters:fill(auto,1)/miami-skyline--florida-717173477-634a7f9c2192419eb1234e109a27c8fc.jpg');
+                      "
+                    >
+                      <div class="card-content">
+                        <span class="trip-type">6 NOCHES - ABRIL</span>
+                        <h2 class="destination-name">Miami</h2>
+                        <div class="price-info">
+                          <span class="price cambio" data-precio="965000"
+                            >AR$ 965.000 / Persona</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="carousel-slide">
+                <a
+                  style="text-decoration: none"
+                  href="./conocer-mas/barcelona.html"
+                >
+                  <div class="destination-card">
+                    <div
+                      class="card-image"
+                      style="
+                        background-image: url('https://th.bing.com/th/id/OIP.LL-JIQlNqa4K6C5mSpxe8AHaEb?r=0&rs=1&pid=ImgDetMain');
+                      "
+                    >
+                      <div class="card-content">
+                        <span class="trip-type">3 NOCHES - ENERO</span>
+                        <h2 class="destination-name">Barcelona</h2>
+                        <div class="price-info">
+                          <span class="price cambio" data-precio="924498"
+                            >AR$ 924.498 / Persona</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  style="text-decoration: none"
+                  href="./conocer-mas/Santiago.html"
+                >
+                  <div class="destination-card">
+                    <div
+                      class="card-image"
+                      style="
+                        background-image: url('https://www.civitatis.com/blog/wp-content/uploads/2012/12/shutterstock_1282092994-1280x972.jpg');
+                      "
+                    >
+                      <div class="card-content">
+                        <span class="trip-type">8 NOCHES - JULIO</span>
+                        <h2 class="destination-name">Santiago de Chile</h2>
+                        <div class="price-info">
+                          <span class="price cambio" data-precio="550000"
+                            >AR$ 550.000 / Persona</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a style="text-decoration: none" href="./conocer-mas/roma.html">
+                  <div class="destination-card">
+                    <div
+                      class="card-image"
+                      style="
+                        background-image: url('https://th.bing.com/th/id/R.36f2cf9b8f5617c5ab9e3cc8cd36473b?rik=HFvBew%2fnRV77Lg&riu=http%3a%2f%2fhistoria.nationalgeographic.com.es%2fmedio%2f2019%2f12%2f11%2fcoliseo-roma_2924b6ae_1280x720.jpg&ehk=dMe2e%2bdrYVWx3zq1GHaNXUIsz7HvYg%2fde4ofYdIIi7M%3d&risl=&pid=ImgRaw&r=0');
+                      "
+                    >
+                      <div class="card-content">
+                        <span class="trip-type">5 NOCHES - ABRIL</span>
+                        <h2 class="destination-name">Roma</h2>
+                        <div class="price-info">
+                          <span class="price cambio" data-precio="1084000"
+                            >AR$ 1.084.000 / Persona</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-indicators">
+            <button class="indicator active" data-slide="0"></button>
+            <button class="indicator" data-slide="1"></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="paquetesDestacados__div">
+        <div class="container">
+          <h2 class="paquetesDestacados__h2">Paquetes destacados</h2>
+          <div class="paquetesDestacados__tarjetas">
+            <div class="contenedor-imagen">
+              <img
+                src="https://www.riu.com/blog/wp-content/uploads/2018/07/shutterstock_310904339.jpg"
+                alt="Playa"
+              />
+              <div class="texto-superpuesto">Playas</div>
+            </div>
+            <div class="contenedor-imagen">
+              <img
+                src="https://th.bing.com/th/id/OIP._G9HB8bXZm43Yl1Upyh-5wHaE8?r=0&rs=1&pid=ImgDetMain"
+                alt="crucero"
+              />
+              <div class="texto-superpuesto">Cruceros</div>
+            </div>
+            <div class="contenedor-imagen">
+              <img
+                src="https://sportsmedia.games/wp-content/uploads/2023/09/unnamed-6-7.jpg"
+                alt="F1"
+              />
+              <div class="texto-superpuesto">Fórmula 1</div>
+            </div>
+            <div class="contenedor-imagen">
+              <img
+                src="https://media.diariouno.com.ar/p/4dcc09a4f31bd49b782b5a5afdd90c82/adjuntos/298/imagenes/009/572/0009572591/1200x675/smart/inauguracion-mundial-de-clubes-3jpg.jpg"
+                alt="Mundial De Clubes"
+              />
+              <div class="texto-superpuesto">Mundial De Clubes</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mas-destino">
+        <h2 class="nuestrosPaquetes__h2">NUESTROS PAQUETES</h2>
+        <div class="container">
+          <div class="destino-grid">
+            <div class="mas-destino-card">
+              <div class="card-image">
+                <img
+                  src="https://th.bing.com/th/id/OIP.C_cRUKqo8fzdqnwtNIBD6AHaD9?r=0&rs=1&pid=ImgDetMain"
+                  alt="El Calafate"
+                />
+              </div>
+              <div class="card-contenido">
+                <div class="abajo_img">
+                  <p class="cntNoches">3 NOCHES - JUNIO</p>
+                  <p class="lugar">Patagonia</p>
+                </div>
+                <h3>El Calafate</h3>
+                <p><b>* Incluye:</b> Vuelo + Hotel + Asistencia</p>
+
+                <p class="precio">
+                  Desde <b class="cambio" data-precio="457000">$457.000</b> /
+                  Persona
+                </p>
+                <a href="./conocer-mas/calafate.html">
+                  <button class="know-more-btn">Conocer más</button>
+                </a>
+              </div>
+            </div>
+
+            <div class="mas-destino-card">
+              <div class="card-image">
+                <img src="./images/Estocolmo.jpg" alt="Estocolmo" />
+              </div>
+              <div class="card-contenido">
+                <div class="abajo_img">
+                  <p class="cntNoches">5 NOCHES - NOVIEMBRE</p>
+                  <p class="lugar">SUECIA</p>
+                </div>
+                <h3>Estocolmo</h3>
+                <p><b>* Incluye:</b> Vuelo + Asistencia + Auto</p>
+
+                <p class="precio">
+                  Desde <b class="cambio" data-precio="850000">$850.000</b> /
+                  Persona
+                </p>
+                <a href="./conocer-mas/estocolmo.html">
+                  <button class="know-more-btn">Conocer más</button>
+                </a>
+              </div>
+            </div>
+
+            <div class="mas-destino-card">
+              <div class="card-image">
+                <img src="./images/Miami.jpg" alt="Miami" />
+              </div>
+              <div class="card-contenido">
+                <div class="abajo_img">
+                  <p class="cntNoches">6 NOCHES - Julio</p>
+                  <p class="lugar">EEUU</p>
+                </div>
+                <h3>Miami</h3>
+                <p><b>* Incluye:</b> Vuelo + Hotel + Asistencia</p>
+
+                <p class="precio">
+                  Desde <b class="cambio" data-precio="965000">$965.000</b> /
+                  Persona
+                </p>
+                <a href="./conocer-mas/miami.html">
+                  <button class="know-more-btn">Conocer más</button>
+                </a>
+              </div>
+            </div>
+
+            <div class="mas-destino-card">
+              <div class="card-image">
+                <img src="./images/barcelona.jpg" alt="Barcelona" />
+              </div>
+              <div class="card-contenido">
+                <div class="abajo_img">
+                  <p class="cntNoches">3 NOCHES - ENERO</p>
+                  <p class="lugar">ESPAÑA</p>
+                </div>
+                <h3>Barcelona</h3>
+                <p><b>* Incluye:</b> Vuelo + Hotel</p>
+
+                <p class="precio">
+                  Desde <b class="cambio" data-precio="924498">$924.498</b> /
+                  Persona
+                </p>
+                <a href="./conocer-mas/barcelona.html">
+                  <button class="know-more-btn">Conocer más</button>
+                </a>
+              </div>
+            </div>
+
+            <div class="mas-destino-card">
+              <div class="card-image">
+                <img src="./images/Roma.jpg" alt="Roma" />
+              </div>
+              <div class="card-contenido">
+                <div class="abajo_img">
+                  <p class="cntNoches">5 NOCHES - ABRIL</p>
+                  <p class="lugar">ITALIA</p>
+                </div>
+                <h3>Roma</h3>
+                <p><b>* Incluye:</b> Vuelo + Asistencia</p>
+
+                <p class="precio">
+                  Desde <b class="cambio" data-precio="1084000">$1.084.000</b> /
+                  Persona
+                </p>
+                <a href="./conocer-mas/roma.html">
+                  <button class="know-more-btn">Conocer más</button>
+                </a>
+              </div>
+            </div>
+            <div class="mas-destino-card">
+              <div class="card-image">
+                <img src="./images/SgoChile.jpg" alt="Santiago de Chile" />
+              </div>
+              <div class="card-contenido">
+                <div class="abajo_img">
+                  <p class="cntNoches">8 NOCHES - JULIO</p>
+                  <p class="lugar">CHILE</p>
+                </div>
+                <h3>Santiago de Chile</h3>
+                <p><b>* Incluye:</b> Hotel + Asistencia</p>
+
+                <p class="precio">
+                  Desde <b class="cambio" data-precio="550000">$550.000</b> /
+                  Persona
+                </p>
+                <a href="./conocer-mas/Santiago.html">
+                  <button class="know-more-btn">Conocer más</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h2 class="footer-title">Adventure Viajes</h2>
+            <p>
+              Tu agencia de viajes confiable para vivir aventuras inolvidables.
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-title">Sobre Adventure Viajes</h3>
+            <ul class="footer-links">
+              <li><a href="#">Preguntas frecuentes</a></li>
+              <li><a href="#">Consultar aquí</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-title">Seguinos en:</h3>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            Copyright © 2025 AdventureViajes. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="paquetes.js"></script>
+    <script src="paquetesF.js"></script>
+    <script src="../cambioMonedas.js"></script>
+  </body>
+</html>
