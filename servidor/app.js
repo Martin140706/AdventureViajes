@@ -1,12 +1,22 @@
 const nodemailer = require("nodemailer");
+require ("dotenv").config()
 
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "tolosamartintecnica@gmail.com",
-    pass: "vsrdlnshtzbztfdv", // sin espacios
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
   },
 });
+
+transporter.verify((err) => {
+  if (err) {
+    console.log("❌ Error mail:", err);
+  } else {
+    console.log("✅ Mail conectado");
+  }
+});
+
 
 const http = require("http");
 const fs = require("fs");
