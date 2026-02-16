@@ -1,19 +1,20 @@
-const mysql = require("mysql");
+const mysql = require("mysql2");
+require("dotenv").config();
 
 const conexion = mysql.createConnection({
-  host: "localhost",
-  user: "AdViajes",
-  password: "AdvViajes",
-  database: "adventureviajes",
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
+  port: process.env.DB_PORT || 3306
 });
 
 conexion.connect((err) => {
   if (err) {
-    console.error("error de conexión:", err);
+    console.error("❌ Error de conexión a BD:", err);
     return;
   }
-  console.log("Conexión exitosa a la base de datos");
+  console.log("✅ Conexión exitosa a la base de datos");
 });
 
 module.exports = conexion;
-// Exportar la conexión para usarla en otros módulos
