@@ -44,6 +44,6 @@ El servidor estará disponible en: http://localhost:3000
 
 ## 👨‍💻 Autor
 
-Martín Tolosa
+Martín Tolosa, Valentín Tiraboschi
 
 Proyecto realizado con fines educativos y de portfolio.
