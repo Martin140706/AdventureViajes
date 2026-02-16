@@ -83,9 +83,9 @@ const server = http.createServer((req, res) => {
       const email = datos.email;
       const contrasena = datos.contrasena;
 
-      const sql =
-        "INSERT INTO usuarios (nombre, email, contrasena) VALUES (?, ?, ?)";
-      conexion.query(sql, [nombre, email, contrasena], (err, resultado) => {
+      const sql = 
+        "INSERT INTO usuarios (nombre, email, contrasena, tipo_usuario) VALUES (?, ?, ?, ?)";
+      conexion.query(sql, [nombre, email, contrasena, 'cliente'], (err, resultado) => {
         if (err) {
           console.error("Error al insertar datos:", err);
           res.writeHead(500, { "Content-Type": "text/plain" });
